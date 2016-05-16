@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод equals</title>
+
+    <script type="text/javascript">
+        function Rectangle(w, h) {
+            this.width = w;
+            this.height = h;
+        }
+
+        Rectangle.prototype.getArea = function () {
+            return this.width * this.height;
+        }
+
+        // переопределение метода toString из Object
+        Rectangle.prototype.toString = function () {
+            return "Прямоугольник W:" + this.width + " H:" + this.height;
+        }
+
+        // переопределение метода valueOf из Object
+        Rectangle.prototype.valueOf = function () {
+            return this.getArea();
+        }
+
+        // метод для проверки равенства объектов
+        Rectangle.prototype.equals = function (otherObj) {
+            if (this.width === otherObj.width && this.height === otherObj.height) {
+                return true;
+            }
+            return false;
+        }
+
+        // объекты имеют одинаковые значения.
+        var rect1 = new Rectangle(100, 200);
+        var rect2 = new Rectangle(100, 200);
+
+        // проверка равенства объектов с помощью метода equals
+        var res = rect1.equals(rect2);
+        document.write("rect1 == rect2 -> " + res);
+
+        var rect3 = rect1; // rect1 и rect3 ссылки на один и тот же объект в памяти
+        res = rect3 == rect1;
+        document.write("<br /><br />rect3 == rect2 -> " + res);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

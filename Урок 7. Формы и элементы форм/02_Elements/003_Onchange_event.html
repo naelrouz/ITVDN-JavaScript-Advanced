@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Событие onchange</title>
+    <script>
+
+        window.onload = function () {
+            for (var i = 0; i < document.forms[0].elements.length; i++) {
+
+                // обработчик на событие смены значения в элементе
+                document.forms[0].elements[i].onchange = function () {
+                    document.getElementById("output").innerHTML = "Значение изменилось в " + this.name;
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        First <input type="text" name="first" value="" /> <br />
+        Second <input type="text" name="second" value="" /> <br />
+        Third <input type="text" name="third" value="" /> <br />
+    </form>
+    <p id="output"></p>
+</body>
+</html>

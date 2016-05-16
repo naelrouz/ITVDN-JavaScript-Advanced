@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод test()</title>
+    <script type="text/javascript">
+        // Метод test возвращает true если метод exec возвращает не null;
+        var pattern = /\d\d\d/;
+
+        var input = "hello world";
+        if (pattern.test(input)) {
+            document.write("Строка " + input + " соответствует шаблону<br />");
+        }
+        else {
+            document.write("Строка " + input + " НЕ соответствует шаблону<br />");
+        }
+
+        input = "123";
+        if (pattern.test(input)) {
+            document.write("Строка " + input + " соответствует шаблону<br />");
+        }
+        else {
+            document.write("Строка " + input + " НЕ соответствует шаблону<br />");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

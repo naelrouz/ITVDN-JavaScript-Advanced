@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Зачем нужны пространства имен и модули</title>
+    <script src="BadModule1.js"></script>
+    <script src="BadModule2.js"></script>
+    <script>
+        // из-за глобальной переменной name метод startModule1() и startModule2() будут выводить одинаковые значения.
+        startModule1();
+        startModule2();
+    </script>
+</head>
+<body>
+</body>
+</html>

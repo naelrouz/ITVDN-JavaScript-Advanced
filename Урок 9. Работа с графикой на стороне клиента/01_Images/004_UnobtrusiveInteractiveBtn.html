@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ненавязчивая смена изображения</title>
+    <script>
+
+        window.onload = function () {
+            addRollover("btn", "images/button-hover.jpg");
+        }
+
+        function addRollover(id, path) {
+            var e = document.getElementById(id);
+
+            // если элемент не img пропускаем, завершаем функцию.
+            if (e.tagName.toLowerCase() != "img") return;
+
+            (new Image()).src = path;
+            var basePath = e.src;
+
+            e.addEventListener("mouseover", function () { this.src = path; })
+            e.addEventListener("mouseout", function () { this.src = basePath; })
+        }
+
+    </script>
+</head>
+<body>
+    <img id="btn" src="images/button.jpg" />
+</body>
+</html>

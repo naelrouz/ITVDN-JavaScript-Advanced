@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Пример проверки достоверности ввода</title>
+    <script type="text/javascript" src="Validate_002.js"></script>
+    <style>
+        .error {
+            background-color: #fc6363;
+        }
+        .valid {
+            background-color: #81e569;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        Name:
+        <input type="text" name="userName"
+            data-val="\S"
+            data-val-msg="Введите значение"
+            data-val-msg-id="userNameMsg" />
+
+        <span id="userNameMsg"></span>
+        <br />
+
+        Email:
+        <input type="text" name="email"
+            data-val="\b[a-z0-9._]+@[a-z0-9.-]+\.[a-z]{2,4}\b"
+            data-val-msg="Вы ввели не правильный email"
+            data-val-msg-id="emailMsg" />
+        <span id="emailMsg"></span>
+        <br />
+
+        Zip:
+        <input type="text" name="zip"
+            data-val="^\d{5}$"
+            data-val-msg="Почтовый индекс введен не правильно"
+            data-val-msg-id="zipMsg" />
+        <span id="zipMsg"></span>
+        <br />
+
+        <input type="submit" />
+    </form>
+</body>
+</html>
+

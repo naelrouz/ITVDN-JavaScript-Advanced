@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Установка времени жизни для cookie</title>
+    <script type="text/javascript">
+        function setCookie() {
+            document.cookie = "lang=HTML; max-age=120";
+        }
+
+        function getCookie() {
+            alert(document.cookie);
+        }
+
+        function changeCookie() {
+            document.cookie = "lang=JavaScript; max-age=120";
+        }
+
+        function deleteCookie() {
+            document.cookie = "lang=JavaScript; max-age=0";
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="Set cookie" onclick="setCookie()" />
+    <input type="button" value="Get cookie" onclick="getCookie()" />
+    <input type="button" value="Change cookie" onclick="changeCookie()" />
+    <input type="button" value="Delete cookie" onclick="deleteCookie()" />
+</body>
+</html>

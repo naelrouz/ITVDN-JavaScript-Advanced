@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Методы строк</title>
+    <script type="text/javascript">
+        // split - Разбивает строку на подстроки по указанному разделителю и возвращает массив подстрок.
+        var str = "Строка для тестирования примера";
+        var substrs = str.split(" ");
+        document.write(substrs.join("<br />"));
+
+        // charAt - возвращает символ по указанной позиции.
+        var firstChar = str.charAt(0);
+        var lastChar = str.charAt(str.length - 1);
+        document.write("<br /> первый символ - " + firstChar + " последний символ - " + lastChar + "<br />");
+
+        // indexOf - возвращает индекс первого встречающегося в строке указанного символа.
+        str = "ab-cd-ef-gh-ij";
+        var firstDash = str.indexOf("-");
+        document.write("Индекс первого символа '-' в строке " + str + "= " + firstDash + "</br>");
+
+        // lastIndexOf - возвращает индекс последнего встречающегося в строке указанного символа.
+        str = "ab-cd-ef-gh-ij";
+        var lastDash = str.lastIndexOf("-");
+        document.write("Индекс последнего символа '-' в строке " + str + "= " + lastDash + "</br>");
+
+        // toLowerCase() - перевод всех символов в нижний регистр, toUpperCase() - перевод всех символов в верхний регистр.
+        str = "Hello World!!!";
+        str = str.toLowerCase();
+        document.write("toLowerCase " + str + "<br />");
+
+        str = str.toUpperCase();
+        document.write("toUpperCase " + str + "<br />");
+
+        // substring -  возвращает строку между двумя указанными индексами, не включая индексы.
+        str = "Hello, world!";
+        substr = str.substring(6, 12);
+        document.write(substr);
+
+        // substr - возвращает строку начиная с указанного индекса, указанной длины.
+        str = "Hello, world!";
+        substr = str.substr(7, 5);
+        document.write("<br />" + substr);
+    </script>
+</head>
+<body>
+</body>
+</html>

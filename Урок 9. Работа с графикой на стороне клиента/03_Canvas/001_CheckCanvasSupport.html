@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Проверка поддержки Canvas</title>
+    <script>
+
+        // Создание элемента и проверка наличия свойств у полученного объекта.
+        function supports_canvas() {
+            return !!document.createElement("canvas").getContext;
+        }
+
+        if (supports_canvas()) {
+            document.write("Ваш браузер поддерживает элемент Canvas");
+        }
+        else {
+            document.write("Ваш браузер НЕ поддерживает элемент Canvas");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Атрибут position</title>
+    <!--Атрибуты позиционирования-->
+    <style type="text/css">
+        body {
+            height: 2000px;
+        }
+
+        div {
+            border: solid Red 1px;
+            padding: 10px;
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+        }
+
+        #divAbsolute {
+            /* 
+            absolute - позволяет задать абсолютное позиционирование элемента относительно содержащего его элемента.
+            Такие элементы позиционируются отдельно от остальных элементов. Абсолютное позиционирование элемента происходит либо
+            относительно тела документа, либо, если он вложен в другой абсолютно позиционируемый элемент, относительно этого элемента.
+            
+            значение по умолчанию - static. Элементы со static позиционированием не могут быть перемещены с помощью свойств left и top.
+            */
+            position: absolute;
+            top: 30px;
+            left: 300px;
+        }
+
+        #divFixed {
+            /*
+            fixed - позволяет зафиксировать элемент относительно окна браузера. Элементы с таким позиционированием 
+            не прокручиваются с остальной частью документа, такие элементы не зависят от остальных
+            */
+            position: fixed;
+            top: 300px;
+            right: 0px;
+        }
+
+        #divRelative {
+            /*
+            relative - элемент располагается в соответствии с нормальным потоком вывода, а затем его положение смещается
+            относительно его обычного положения в потоке.
+            */
+            position: relative;
+            top: 20px;
+            left: 40px;
+            border: dashed 2px blue;
+            height: 20px;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="divAbsolute">
+        Absolute
+    </div>
+    <div id="divFixed">
+        Fixed
+    </div>
+    <div>
+        <div id="divRelative"></div>
+    </div>
+</body>
+</html>
+
+

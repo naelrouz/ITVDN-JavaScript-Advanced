@@ -1,0 +1,42 @@
+﻿<DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Определение параметров окна</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var Geometry = {};
+        // В разных браузерах существуют разноименные методы и свойства выполняющие схожие операции.
+        // Например, для получения координаты X окна браузера в IE нужно использовать свойство screenLeft,
+        // а в Mozilla - screenX.
+        // Для того что бы упростить написание кроссбраузерного кода, разработчики создают специальные объекты 
+        // на подобие Geometry в этом примере.
+
+        // screenLeft, screenX, innerWidth - свойства объекта window специфичные для версии браузера.
+        if (window.screenLeft || window.screenLeft == 0) { // для IE 
+            Geometry.getWindowX = function () { return window.screenLeft; };
+            Geometry.getWindowY = function () { return window.screenTop; };
+        }
+        else if (window.screenX || window.screenX == 0) { // для Firefox 
+            Geometry.getWindowX = function () { return window.screenX; };
+            Geometry.getWindowY = function () { return window.screenY; };
+        }
+
+        if (window.innerWidth) {
+            Geometry.getViewportWidth = function () { return window.innerWidth; };
+            Geometry.getViewportHeight = function () { return window.innerHeight; };
+        }
+        else if (document.documentElement && document.documentElement.clientWidth) { // Для IE6
+            Geometry.getViewportWidth = function () { return document.documentElement.clientWidth; };
+            Geometry.getViewportHeight = function () { return document.documentElement.clientHeight; };
+        }
+    </script>
+
+    <script type="text/javascript">
+        document.write("X position " + Geometry.getWindowX() + "<br />");
+        document.write("Y position " + Geometry.getWindowY() + "<br />");
+        document.write("Height " + Geometry.getViewportHeight() + "<br />");
+        document.write("Width " + Geometry.getViewportWidth() + "<br />");
+    </script>
+</body>
+</html>

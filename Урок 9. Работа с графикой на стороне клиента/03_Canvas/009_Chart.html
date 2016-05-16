@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Создание гистограммы</title>
+    <script src="BarChart.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            createBarChart("chartContainer",
+                [30, 6, 88, 91, 2, 45, 100, 150, 200],
+                600,
+                300,
+                "green");
+        });
+    </script>
+</head>
+<body>
+    <canvas id="chartContainer"></canvas>
+</body>
+</html>

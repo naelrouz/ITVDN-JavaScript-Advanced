@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Методы write() и writeln() объекта document</title>
+    <script type="text/javascript">
+
+        function ButtonHandler() {
+            // При вызове метода document.write() после формирования страницы происходит создание нового документа.
+            // Данный метод не следует вызывать в обработчиках событий, что бы не потерять содержимое текущей страницы.
+            document.write("Hello world");
+        }
+
+    </script>
+</head>
+<body>
+
+    <!--Использование метода write-->
+    <p style="padding: 8px; margin: 8px; color: Green; font-weight: bold; border: solid 1px black;">
+        <script type="text/javascript">
+            document.write("hello");
+            document.write(" 1", "-", "2", "-", "3");
+        </script>
+    </p>
+
+    <!--Использование метода writeln-->
+    <pre style="padding: 8px; margin: 8px; color: Green; font-weight: bold; border: solid 1px black;">
+<script type="text/javascript">
+    document.writeln("hello");
+    document.writeln("world");
+</script>
+    </pre>
+
+    <input type="button" value="Кнопка" onclick="ButtonHandler()" />
+
+</body>
+</html>

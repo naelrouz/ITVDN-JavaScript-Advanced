@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Установка времени жизни для cookie</title>
+    <script type="text/javascript">
+        function setCookie() {
+            // следующий cookie будет хранится браузером на проятжении 1 недели (60 * 60 * 24 * 7).
+            document.cookie = "info=123; max-age=604800";
+
+            // Существует возможность указать время жизни cookie через устаревшее свойство expires
+            var nextYear = new Date();
+            nextYear.setFullYear(nextYear.getFullYear() + 1);
+            document.cookie = "name=Ivan Ivanv; expires=" + nextYear.toGMTString();
+        }
+
+        function getCookie() {
+            alert(document.cookie);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Set cookie" onclick="setCookie()" />
+    <input type="button" value="Get cookie" onclick="getCookie()" />
+</body>
+</html>

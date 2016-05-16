@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Watermark</title>
+    <script>
+
+        window.onload = function () {
+            var watermark = "Введите логин";
+            var input = document.forms[0].login;
+            initInput();
+
+            input.onfocus = function () {
+                if (input.value == watermark)
+                {
+                    input.value = "";
+                    input.style.color = "black";
+                    input.style.fontStyle = "normal";
+                }
+            }
+
+            input.onblur = function () {
+                if (input.value == "")
+                {
+                    initInput();
+                }
+            }
+
+            function initInput()
+            {
+                input.value = watermark;
+                input.style.color = "gray";
+                input.style.fontStyle = "italic";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        Логин
+        <input type="text" name="login" />
+        <br />
+        Email
+        <input type="text" name="email" placeholder="Enter your email" />
+    </form>
+</body>
+</html>

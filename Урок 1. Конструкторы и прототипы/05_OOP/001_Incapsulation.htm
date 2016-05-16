@@ -1,0 +1,35 @@
+﻿<!--
+Инкапсуляция - сокрытие релаизаци и данных объекта.
+-->
+
+<html>
+<head>
+    <title>Массивы в JavaScript</title>
+
+    <script type="text/javascript">
+
+        var MyClass = function () {
+
+            // закрытый метод
+            var privateMethod = function () {
+                document.write("Закрытый метод");
+            };
+
+            // открытый метод
+            this.publicMethod = function () {
+                document.write("Открытый метод <br />");
+                privateMethod();
+            };
+
+        };
+        var obj = new MyClass();
+        obj.publicMethod();
+
+        obj.privateMethod(); // ошибка
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

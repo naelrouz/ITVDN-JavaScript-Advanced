@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Работа с узлами DOM - методы</title>
+    <script>
+        // Методы для работы с DOM
+        // appendChild - добавить дочерний элемент
+        // insertBefore - добавить элемент перед указанным
+        // removeChild - удаление элемента
+        // replaceChild - замена одного элемента на другой
+
+        window.onload = function () {
+            var div1 = document.getElementById("div1");
+
+            var p1 = document.createElement("p");
+            p1.innerHTML = "Paragraph 1";
+            div1.appendChild(p1);
+
+            var p2 = document.createElement("p");
+            p2.innerHTML = "Paragraph 2";
+            document.body.insertBefore(p2, div1);
+        }
+
+    </script>
+</head>
+<body>
+    <div id="div1" style="border:solid 1px red; padding:10px; margin:10px;">
+    </div>
+</body>
+</html>

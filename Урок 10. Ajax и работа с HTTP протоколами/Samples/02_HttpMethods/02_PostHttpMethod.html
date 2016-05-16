@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Отправка POST параметров</title>
+    <script>
+        window.onload = function () {
+            var xhr = new XMLHttpRequest();
+
+            // настройка объекта запроса с указание метода отправи запроса и данных
+            xhr.open("POST", "PostHandler.ashx");
+            // Content-Type - HTTP заголовок, который указывает серверу, как интерпретировать тело запроса.
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("output").innerHTML = xhr.responseText;
+                }
+            }
+
+            // отправка запроса с указанием данных.
+            xhr.send("a=hello&b=world");
+        }
+    </script>
+</head>
+<body>
+    <p id="output"></p>
+</body>
+</html>

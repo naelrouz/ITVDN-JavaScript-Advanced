@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>getElementById</title>
+    <script>
+        // Ненавязчивый JavaScript (Unobtrusive JavaScript) – отделение функциональности страницы от ее структуры. 
+        // JavaScript может находиться в отдельных модулях и блоки JavaScript кода не должны появляться в разметке. 
+
+        // событие срабатывает после полной загрузки окна.
+        window.onload = function () {
+            // получение элемента со страницы по значению атрибута id
+            var paragraph = document.getElementById("output");
+            var hyperlink = document.getElementById("link");
+
+            paragraph.innerHTML = "HELLO WORLD !!!";
+            hyperlink.innerHTML = "EDUCATION SITE !!!";
+        }
+
+    </script>
+</head>
+<body>
+    <p id="output">Hello world</p>
+    <a id="link" href="http://edu.cbsystematics.com">Education site</a>
+</body>
+</html>

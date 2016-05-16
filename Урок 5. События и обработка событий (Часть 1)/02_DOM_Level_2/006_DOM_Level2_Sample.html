@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Пример использования событий DOM Level 2</title>
+    <script>
+
+        window.addEventListener("load", function () {
+
+            var guard = document.getElementById("guard");
+
+            guard.addEventListener("keypress", function (e) {
+
+                if (String.fromCharCode(e.charCode) != '1'
+                    && String.fromCharCode(e.charCode) != '0') {
+                    // если нажатая кнопка не 0 или 1 отменить действие по умолчанию.
+                    e.preventDefault();
+                }
+
+            }, true);
+
+        }, false);
+
+    </script>
+</head>
+<body>
+    <div id="guard">
+        <input type="text" value="" />
+        <input type="text" value="" />
+        <input type="text" value="" />
+        <input type="text" value="" />
+        <input type="text" value="" />
+        <input type="text" value="" />
+        <input type="text" value="" />
+        <input type="text" value="" />
+        <input type="text" value="" />
+        <input type="text" value="" />
+        <input type="text" value="" />
+        <input type="text" value="" />
+    </div>
+</body>
+</html>

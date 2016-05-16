@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод exec()</title>
+    <script type="text/javascript">
+        // Метод exec работает точно так же как и метод match типа данных string.
+        // Но всегда возвращает только одно значение или null
+        // При глобальном поиске (флаг g) метод возвращает найденную подстроку и продолжает поиск далее по строке.
+        var test = "Строка №2 для тестирования примера с регулярными выражениями в файле 6_RegExMethods_exec.htm";
+        var pattern = /\d/g;
+
+        var res;
+        while ((res = pattern.exec(test)) != null) {
+            alert("Найдено " + res + " в позиции " 
+            + res.index + ". Следующий поиск начнется с индекса " + pattern.lastIndex);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

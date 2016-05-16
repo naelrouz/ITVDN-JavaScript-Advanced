@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Функция-конструктор Rectangle</title>
+
+    <script type="text/javascript">
+
+        function Rectangle(w, h) {
+            // свойства
+            this.width = w;
+            this.height = h;
+
+            // метод
+            // недостатком данного метода, является то, что он будет дублироваться во всех объектах созданных через функцию
+            // Rectangle. Метод не будет меняться от объекта к объекту но при это у будет занимать память, что не оптимально.
+            this.getArea = function () {
+                return this.width * this.height;
+            }
+        }
+
+        var rect = new Rectangle(100, 50);
+        document.write("Площадь прямоугольника " + rect.getArea());
+    </script>
+
+</head>
+<body>
+</body>
+</html>

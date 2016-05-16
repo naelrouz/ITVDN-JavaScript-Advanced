@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Атрибут z-index</title>
+    <style type="text/css">
+        /*
+            CSS атрибут z-index представляет целое число, которое определяет наложение элементов, указывая, какой из перекрывающихся элементов.
+            Порядок наложения можно определять только для смежных элементов (для дочерних элементов одного контейнера).
+            Чем больше значение z-index тем выше находиться элемент. 
+        */
+        div
+        {
+            height: 50px;
+            width: 50px;
+            border:solid 1px black;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <div style="left:10px;top:10px; background-color:Red; z-index:3"></div>
+    <div style="left:20px;top:20px; background-color:Green; z-index:2"></div>
+    <div style="left:30px;top:30px; background-color:Yellow; z-index:1"></div>
+</body>
+</html>

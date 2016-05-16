@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Работа с узлами DOM - Атрибуты</title>
+    <script>
+        window.onload = function () {
+            var a1 = document.getElementById("a1");
+            var a2 = document.getElementById("a2");
+            var a3 = document.getElementById("a3");
+
+            // установка атрибута
+            a1.setAttribute("href", "http://edu.cbsystematics.com");
+
+            // удаление атрибута
+            a2.removeAttribute("href");
+
+            // чтение атрибута
+            alert(a3.getAttribute("href"));
+        }
+    </script>
+</head>
+<body>
+    <a id="a1">Text a1</a>
+    <a id="a2" href="http://edu.cbsystematics.com">Text a2</a>
+    <a id="a3" href="http://edu.cbsystematics.com">Text a3</a>
+</body>
+</html>

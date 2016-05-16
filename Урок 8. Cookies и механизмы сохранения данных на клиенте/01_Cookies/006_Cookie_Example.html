@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Использование cookies</title>
+
+    <script>
+
+        window.onload = function () {
+            function $(id) {
+                return document.getElementById(id);
+            }
+
+            var f = document.forms[0];
+
+            $("saveBtn").onclick = function () {
+                var cookieStr = "";
+                cookieStr += f.cookieName.value + "=" + f.cookieValue.value + ";";
+                cookieStr += "max-age=" + f.cookieAge.value + ";";
+                document.cookie = cookieStr;
+            }
+
+            $("readAll").onclick = function () {
+                alert(document.cookie);
+            }
+
+            $("readSpec").onclick = function () {
+                alert(findCookieValue(f.nameToRead.value));
+            }
+            
+            function findCookieValue(cookieName) {
+                var allcookies = document.cookie;
+                var pos = allcookies.indexOf(cookieName + "=");
+
+                // Если cookie с указанным именем найден, извлечь его значения.
+                if (pos != -1) {
+                    var start = pos + cookieName.length + 1;
+                    var end = allcookies.indexOf(";", start);
+                    if (end == -1) end = allcookies.length;
+                    var value = allcookies.substring(start, end);
+                    value = decodeURIComponent(value);
+                    return value;
+                }
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <form>
+        Имя
+        <input type="text" name="cookieName" value="" /><br />
+        Значение
+        <input type="text" name="cookieValue" value="" /><br />
+        Время жизни
+        <input type="text" name="cookieAge" value="" /><br />
+        <input id="saveBtn" type="button" value="Сохранить" />
+
+        <br />
+        <br />
+        <br />
+
+        <input id="readAll" type="button" value="Прочитать все cookies" />
+        <br />
+        Имя для чтения
+        <input type="text" name="nameToRead" />
+        <input id="readSpec" type="button" value="Прочитать" />
+    </form>
+</body>
+</html>

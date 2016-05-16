@@ -1,0 +1,30 @@
+﻿<!--
+С помощью оператора typeof можно получить строку указывающую тип операнда.
+Оператор typeof может быть удобен для того что бы отличить объект от базового типа.
+-->
+
+<html>
+<head>
+    <title>Оператор typeof - пример</title>
+
+    <script type="text/javascript">
+
+        function printMessage(message) {
+            // проверка типа параметра функции
+            if (typeof message != "string") {
+                alert("Параметр должен быть строкового типа!");
+            }
+            else {
+                document.write(message);
+            }
+        }
+
+        printMessage(new Array());
+        printMessage("Hello world");
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            document.getElementById("openButton").onclick = openButtonHandler;
+            document.getElementById("closeButton").onclick = closeButtonHandler;
+
+            var w;
+
+            function openButtonHandler() {
+                // первый параметр - html страница, которая будет загружена в новом окне.
+                // второй параметр - имя окна
+                // третий параметр - список дополнительных параметров (необязательный)
+                w = window.open("window.html", "Window Name", "width=400,height=400,status=yes,resizable=no");
+            }
+
+            function closeButtonHandler() {
+                w.close();
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="openButton" value="Открыть" />
+    <input type="button" id="closeButton" value="Закрыть" />
+</body>
+</html>

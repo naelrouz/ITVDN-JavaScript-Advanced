@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        // Создание строковой переменной.
+        var a = 'my string'; // к объекту a нельзя добавлять новые свойства так как объект создавался через строковой литерал.
+        var b = "my string"; // к объекту b нельзя добавлять новые свойства так как объект создавался через строковой литерал.
+        var c = new String("my string");
+        var d = String("my string");
+
+        // указание юникод символов явным образом.
+        var str = "\u1234";
+        document.write(str);
+
+        document.write("typeof объекта, созданного через значение, взятое в двойные кавычки - " + typeof a);
+        document.write("<br />");
+        document.write("typeof для объекта, созданного через оператор new " + typeof c);
+        // Объекты, созданные через оператор new и через значение, взятое в двойные кавычки, будут выдавать разные значения
+        // при использовании оператора typeof.
+        // typeof для объекта, созданного через кавычки - string
+        // typeof для объекта, созданного через new - object
+        // Интерпретатор оба объекта будет воспринимать как строковое значение.
+        // но дополнительные свойства и методы добавить можно будет только в тот объект, который был создан через оператор new
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+

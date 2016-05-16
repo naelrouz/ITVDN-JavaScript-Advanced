@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MouseEvent Интерфейс</title>
+    
+    <style type="text/css">
+        div {
+            background-color: #ceffff;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.addEventListener("load", init, false);
+
+        function init() {
+            var div = document.getElementsByTagName("div")[0];
+            div.addEventListener("mousemove", handler, false);
+        }
+
+        function handler(e) {
+            var message = "";
+            message += e.button + "<br />";                 // 0 - левая клавиша, 1 - средняя клавиша, 2 - правая.
+            message += "Alt: " + e.altKey + "<br />";       // true если клавиша Alt зажата.
+            message += "Ctrl: " + e.ctrlKey + "<br />";     // true если клавиша Ctrl зажата.
+            message += "Shift: " + e.shiftKey + "<br />";   // true если клавиша Shift заэата.
+            message += "X: " + e.clientX + "<br />";        // координаты относительно левого верхнего угла документа.
+            message += "Y: " + e.clientY + "<br />";        // координаты относительно левого верхнего угла документа.
+            message += "screen X: " + e.screenX + "<br />"; // координаты относительно экрана.
+            message += "screen Y: " + e.screenY + "<br />"; // координаты относительно экрана.
+            document.getElementById("output").innerHTML = message;
+        }
+    </script>
+</head>
+<body>
+    <div></div>
+    <p id="output"></p>
+</body>
+</html>

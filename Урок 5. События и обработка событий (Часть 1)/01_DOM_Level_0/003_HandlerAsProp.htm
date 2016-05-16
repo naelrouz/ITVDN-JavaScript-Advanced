@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Обработчик как свойство</title>
+    <script type="text/javascript">
+        window.onload = loadHandler;
+
+        function loadHandler() {
+            var p1 = document.getElementById("p1");
+            var p2 = document.getElementById("p2");
+
+            // обработичк как анонимная функция. 
+            p1.onclick = function () { alert("hello") }; // Ненавязчивый JS
+
+            // обработчик как другая функция из этого сценария.
+            p2.onclick = clickHandler;
+        }
+
+        function clickHandler() {
+            alert("hello");
+        }
+    </script>
+</head>
+
+<body>
+    
+    <p id="p1">
+        click me!
+    </p>
+
+    <p id="p2">
+        click me!
+    </p>
+
+</body>
+</html>

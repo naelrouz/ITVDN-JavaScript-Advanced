@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Сохранение cookie</title>
+    <script type="text/javascript">
+        function setCookie() {
+            // Что бы связать временное значение cookie файла с текущим документом. достаточно выполнить следующую операцию
+            document.cookie = "info=123"
+
+            // Значение Cookie не могут содержать точку с запятой, запятые или символы разделители. Перед сохранением значение в cookie желательно вызвать
+            // функцию encodeURIComponent() при чтении значения надо вызвать decodeURIComponent()
+            // записанный таким способом cookie сохраняются в текущем сеансе браузера но удаляются после его закрытия.
+        }
+
+        function getCookie() {
+            alert(document.cookie);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Set cookie" onclick="setCookie()" />
+    <input type="button" value="Get cookie" onclick="getCookie()" />
+</body>
+</html>

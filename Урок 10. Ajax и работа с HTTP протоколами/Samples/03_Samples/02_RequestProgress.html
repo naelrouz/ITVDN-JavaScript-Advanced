@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Индикатор загрузки</title>
+    <script>
+        window.onload = function () {
+
+            // фунцикя для отображения индикатора загрузки.
+            function show() {
+                document.getElementById("loader").style.display = "block";
+            }
+
+            // фунцикя для удаления индикатора загрузки.
+            function hide() {
+                document.getElementById("loader").style.display = "none";
+            }
+
+            var xhr = new XMLHttpRequest();
+
+            document.getElementById("buttonGet").onclick = function () {
+                xhr.open("GET", "TestHandler.ashx");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        hide(); // скрыть индикатор.
+                        document.getElementById("output").innerHTML = xhr.responseText;
+                    }
+                }
+                xhr.send();
+                show(); // отобразить индикатор.
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="buttonGet" type="button" value="Get Data" />
+    <p id="loader" style="display: none; color:red;">
+        <img src="ajax-loader.gif" /></p>
+    <p id="output"></p>
+</body>
+</html>

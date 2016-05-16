@@ -1,0 +1,57 @@
+﻿<!--
+    Насле́дование — механизм объектно-ориентированного программирования (наряду с инкапсуляцией, полиморфизмом и абстракцией), позволяющий описать 
+    новый класс на основе уже существующего (родительского), при этом свойства и функциональность родительского класса заимствуются новым классом.
+
+    Другими словами, класс-наследник реализует спецификацию уже существующего класса (базовый класс). Это позволяет обращаться с объектами 
+    класса-наследника точно так же, как с объектами базового класса.
+-->
+
+<html>
+<head>
+    <title>Наследование в JavaScript</title>
+
+    <script type="text/javascript">
+        // Наследование
+
+        // базовая функция-конструктор
+        function Human(name) {
+            this.name = name;
+            this.talk = function () { document.write("Hello My Name is " + this.name + "<br />") }
+        }
+
+        // производная функция конструктор
+        function Student(name) {
+            this.name = name;
+            this.school = "CBS school";
+        }
+
+        function Worker(name) {
+            this.name = name;
+            this.speciality = "Software developer";
+        }
+
+        // Создаем экземпляр родителя
+        var human = new Human("name");
+        //human.talk(); 
+
+        // наследуем Student и Worker от Human устанавливая функцию как прототип.
+        Student.prototype = human;
+        Worker.prototype = human;
+        
+        var Alex = new Student("Alexander");
+        var Andrew = new Worker("Andrew");
+
+        document.write("<br />Student<br />");
+
+        Alex.talk();
+        document.write(Alex.school);
+
+        document.write("<br />Worker<br />");
+
+        Andrew.talk();
+        document.write(Andrew.speciality);
+    </script>
+</head>
+<body>
+</body>
+</html>

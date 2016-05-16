@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>Date.get* </title>
+</head>
+<body>
+
+    <script type="text/javascript" language="JavaScript">
+        var date = new Date();
+        document.write("<b>date = </b>" + date + "<br/>");
+        document.write("<b>date.getDate() = </b>" +
+        date.getDate() // возвращает число месяца, установленное в объекте Date 
+                  + "<br/>");
+        document.write("<b>date.getMonth() = </b>" + date.getMonth() // возвращает номер месяца - число от 0 до 11, где 0-январь, 1-февраль и т.д.
+                              + "<br/>");
+        document.write("<b>date.getFullYear() = </b>" + date.getFullYear() // возвращает год, установленный в объекте Date в 4-числовом формате (1995, 2004 и т.п.)
+                              + "<br/>");
+        document.write("<b>date.getYear() = </b>" + date.getYear() // количество лет прошедшее начиная с 1900 года
+                              + "<br/>");
+        document.write("<b>date.getDay() = </b>" + date.getDay() // возвращает номер дня недели - число от 0 до 6, где 0-воскресение, 1-понедельник и т.д.
+                              + "<br/><br/>");
+
+        document.write("<b>date.getHours() = </b>" + date.getHours() // возвращает час - число от 0 до 23
+                              + "<br/>");
+        document.write("<b>date.getMinutes() = </b>" + date.getMinutes() // возвращает минуты - число от 0 до 59
+                              + "<br/>");
+        document.write("<b>date.getSeconds() = </b>" + date.getSeconds() // возвращает секунды - число от 0 до 59
+                              + "<br/>");
+        document.write("<b>date.getMilliseconds() = </b>" + date.getMilliseconds() // возвращает миллисекунды - число от 0 до 999
+                              + "<br/><br/>");
+
+        document.write("<b>date.getTime() = </b>" + date.getTime()); // возвращает количество миллисекунд, между датой, 
+        // установленной в объекте Date и полночью 1 января 1970 года
+
+    </script>
+
+</body>
+</html>

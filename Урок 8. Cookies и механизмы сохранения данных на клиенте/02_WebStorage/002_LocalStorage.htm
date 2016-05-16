@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Сохранение и извлечение данных localStorage</title>
+    <script type="text/javascript">
+
+        function init() {
+            var output = document.getElementById("output");
+            var btn1 = document.getElementById("btn1");
+            var btn2 = document.getElementById("btn2");
+
+            btn1.onclick = function () {
+                window.localStorage.setItem("key1", "Test value");
+                // или
+                window.localStorage.key2 = "Test value 2";
+                // или
+                window.localStorage["key3"] = "Test value 3";
+            }
+
+            btn2.onclick = function () {
+                output.innerHTML = window.localStorage.getItem("key1");
+                output.innerHTML += "<br />";
+                output.innerHTML += window.localStorage.key2;
+                output.innerHTML += "<br />";
+                output.innerHTML += window.localStorage["key3"];
+            }
+        }
+
+        window.addEventListener("load", init, false);
+    </script>
+</head>
+<body>
+    <p>
+        Значения в localStorage существуют не зависимо от закрытия вкладки или браузера
+    </p>
+    <p>
+        Значения совместно используются всеми окнами и вкладками, выполняющимися на одном
+        и том же источнике.
+    </p>
+    <input id="btn1" type="button" value="Запись в localStorage" />
+    <input id="btn2" type="button" value="Чтение из localStorage" />
+    <div id="output">
+    </div>
+</body>
+</html>

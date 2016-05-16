@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Анимация изображения</title>
+    <script src="Animation.js"></script>
+
+    <script>
+        window.addEventListener("load", function () {
+
+            var animation = new Animation(
+                "animCanvas",
+                5,
+                ["images/frame1.jpg",
+                 "images/frame2.jpg",
+                 "images/frame3.jpg",
+                 "images/frame4.jpg",
+                 "images/frame5.jpg",
+                 "images/frame6.jpg"]);
+
+            document.getElementById("startButton").addEventListener("click", function () {
+                animation.start();
+            });
+
+            document.getElementById("stopButton").addEventListener("click", function () {
+                animation.stop();
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <img id="animCanvas" src="images/frame1.jpg" />
+    <br />
+    <input id="startButton" type="button" value="Start" />
+    <input id="stopButton" type="button" value="Stop" />
+</body>
+</html>

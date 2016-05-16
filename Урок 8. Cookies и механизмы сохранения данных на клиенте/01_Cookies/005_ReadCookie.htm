@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function setCookie() {
+            // Что бы связать временное значение cookie файла с текущим документом. достаточно выполнить следующую операцию
+            document.cookie = "version=" + encodeURIComponent(document.lastModified);
+            // Cookie не могут содержать точку с запятой, запятые или символы разделители. Перед сохранением значение в cookie желательно вызвать
+            // функцию encodeURIComponent() при чтении значения надо вызвать decodeURIComponent()
+            // записанный таким способом cookie сохраняются в текущем сеансе браузера но удаляются после его закрытия.
+        }
+
+        function getCookie() {
+            alert(findCookieValue("test"));
+        }
+        // version=123; test=a1; test2=a2
+        function findCookieValue(cookieName) {
+            var allcookies = document.cookie;
+            var pos = allcookies.indexOf(cookieName + "="); // version=
+
+            // Если cookie с указанным именем найден, извлечь его значения.
+            if (pos != -1) {
+                var start = pos + cookieName.length + 1;
+                var end = allcookies.indexOf(";", start);
+
+                if (end == -1) {
+                    end = allcookies.length;
+                }
+
+                var value = allcookies.substring(start, end);
+
+                return decodeURIComponent(value);
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <input type="button" value="Set cookie" onclick="setCookie()" />
+    <input type="button" value="Get cookie" onclick="getCookie()" />
+</body>
+</html>

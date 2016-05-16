@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Прототип</title>
+
+    <script type="text/javascript">
+
+        function Rectangle(w, h) {
+            // Свойства
+            this.width = w;
+            this.height = h;
+        }
+
+        Rectangle.prototype.getArea = function () {
+            return this.width * this.height;
+        }
+
+        // Свойство прототпа, будет доступно всем экземплярам
+        Rectangle.prototype.name = "RECTANGLE";
+
+        var rect1 = new Rectangle(100, 50);
+        var rect2 = new Rectangle(30, 150);
+
+        document.write("Площадь прямоугольника 1 " + rect1.getArea() + "<br />");
+        document.write("Площадь прямоугольника 2 " + rect2.getArea() + "<br /><br />");
+
+        document.write("Имя прямоугольника 1 " + rect1.name + "<br />");
+        document.write("Имя прямоугольника 2 " + rect2.name + "<br /><br />");
+
+        // При попытке смены значения, которое было унаследовано от прототипа, в объекте будет создана копия свойства (свойство прототипа не изменится). 
+        // Значение в прототипе может быть измененно только черзе операцию Rectangle.prototype.name
+        //rect1.name = "first rectangle";
+        Rectangle.prototype.name = "first rectangle";
+
+        document.write("После смены имени объекта rect1<br/>")
+        document.write("Имя прямоугольника 1 " + rect1.name + "<br />");
+        document.write("Имя прямоугольника 2 " + rect2.name + "<br />");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

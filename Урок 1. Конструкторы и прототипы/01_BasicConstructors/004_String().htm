@@ -1,0 +1,36 @@
+﻿<html>
+    <head>
+        <title>Конструктор String()</title>
+
+        <script type="text/javascript">
+
+            // переменая со строковым значеним
+            var simpleStr = "My String";
+
+            // объект типа String
+            var objectStr = new String("some String object");
+
+            function newLine(str) {
+                document.write(str + "<br />");
+                document.write("==========================================================<br />");
+            }
+
+            newLine(simpleStr);
+
+            newLine(objectStr);
+
+            // добавлять новые свойства и методы можно только к объектам созданым через оператор new
+            objectStr.customProperty = 123;
+            document.write(objectStr.customProperty + "<br />");
+
+            // добавить свойство в simpleStr невозможно
+            simpleStr.customProperty2 = 123;
+            document.write(simpleStr.customProperty2);
+
+        </script>
+
+    </head>
+    <body>
+    <!--Здесь располагается какая либо разметка-->
+    </body>
+</html>

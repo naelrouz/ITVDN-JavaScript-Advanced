@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>setTimeout()</title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            // setTimeout - планирует один запуск указанной функции через определенное количество миллисекунд
+            // функция showMessage будет запущена через 5 секунд
+            setTimeout(showMessage, 5000)
+
+            function showMessage() {
+                alert("Hello world");
+            }
+
+            // второй вариант запуска
+            //setTimeout(function () {
+            //    alert("Hello world");
+            //}, 5000);
+        }
+    </script>
+</head>
+<body>
+    <p>Через 5 секунд будет показано сообщение</p>
+</body>
+</html>
+
+
+

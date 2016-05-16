@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод toString</title>
+
+    <script type="text/javascript">
+        function Rectangle(w, h) {
+            this.width = w;
+            this.height = h;
+        }
+
+        Rectangle.prototype.getArea = function () {
+            return this.width * this.height;
+        }
+
+        // переопределение метода toString из Object
+        Rectangle.prototype.toString = function () {
+            return "Прямоугольник W:" + this.width + " H:" + this.height;
+        }
+
+        var rect1 = new Rectangle(100, 200);
+        var rect2 = new Rectangle(400, 300);
+
+        document.write(rect1 + "<br />"); 
+        document.write(rect2.toString() + "<br />");
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

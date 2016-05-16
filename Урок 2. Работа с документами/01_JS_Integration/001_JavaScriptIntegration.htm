@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Встраивание JavaScript кода в HTML страницу</title>
+
+    <!--В тэге Script в head страницы----------------------------------------------->
+    <script type="text/javascript">
+        // JavaScript код
+    </script>
+    
+    <!--Из внешнего файла----------------------------------------------------------->
+    <script type="text/javascript" src="script_file.js"></script>
+</head>
+
+<body>
+    <!--В качестве обработчика события через html атрибут.-------------------------->
+    <input type="button" value="Кнопка" onclick="alert('Hello')" />
+
+    <br />
+
+    <!--Как тело URL адреса--------------------------------------------------------->
+    <a href="javascript:alert('Hello')">Ссылка</a>
+
+    <br />
+
+    <!--В тэге Script в body страницы----------------------------------------------->
+    <script type="text/javascript">
+        // JavaScript код
+    </script>
+    
+    <!--Из внешнего файла----------------------------------------------------------->
+    <script type="text/javascript" src="script_file.js"></script>
+</body>
+</html>

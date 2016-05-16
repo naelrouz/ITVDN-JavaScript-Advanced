@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Простая анимация</title>
+
+    <script type="text/javascript">
+        var div1;
+        var leftPos = 0;
+
+        window.onload = function () {
+            div1 = document.getElementById("div1");
+            setInterval(animate, 10);
+        }
+
+        function animate() {
+            div1.style.left = leftPos + "px";
+            leftPos += 1;
+        }
+    </script>
+</head>
+<body>
+    <div id="div1"
+        style="height: 30px; width: 30px; background-color: Green; position: relative;">
+    </div>
+</body>
+</html>

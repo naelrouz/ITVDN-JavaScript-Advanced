@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Метод equals</title>
+
+    <script type="text/javascript">
+        function Rectangle(w, h) {
+            this.width = w;
+            this.height = h;
+        }
+
+        Rectangle.prototype.getArea = function () {
+            return this.width * this.height;
+        }
+
+        // переопределение метода toString из Object
+        Rectangle.prototype.toString = function () {
+            return "Прямоугольник W:" + this.width + " H:" + this.height;
+        }
+
+        // переопределение метода valueOf из Object
+        Rectangle.prototype.valueOf = function () {
+            return this.getArea();
+        }
+
+        // метод для проверки равенства объектов
+        Rectangle.prototype.equals = function (that) {
+            if (this.width === that.width && this.height === that.height) {
+                return true;
+            }
+            return false;
+        }
+
+        // Метод для сравнения объеков.
+        // Если текущий объект больше чем тот который передан в параметры - возвращаем значение > 0
+        // Если текущий объект меньше чем тот который передан в параметры - возвращаем значение < 0
+        // Если объекты равны возвращаем 0
+        Rectangle.prototype.compareTo = function (otherObject) {
+            if (this.getArea() > otherObject.getArea()) {
+                return 1;
+            }
+            else if (this.getArea() < otherObject.getArea()) {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+            // или таким способом
+            return this.getArea() - otherObject.getArea();
+        }
+
+        // объекты имеют одинаковые значения.
+        var rect1 = new Rectangle(1000, 20);
+        var rect2 = new Rectangle(1000, 20);
+
+        // при наличии метода valueOf(), который возвращает простое значение операторы сравнения будут использовать это значение для
+        // определения какой объект больше, а какой меньше
+        // если реализация метода valueOf() не возможна, то в таком случае, рекомендуется реализовать метода compareTo(a)
+        if (rect1 > rect2) {
+            document.write("Объкет rect1 > rect2<br />");
+        }
+        if (rect1 < rect2) {
+            document.write("Объкет rect1 < rect2<br />");
+        }
+        if (rect1 <= rect2) {
+            document.write("Объкет rect1 <= rect2<br />");
+        }
+        if (rect1 >= rect2) {
+            document.write("Объкет rect1 >= rect2<br />");
+        }
+        if (rect1 == rect2) {
+            document.write("Объкет rect1 == rect2<br />");
+        }
+        if (rect1 != rect2) {
+            document.write("Объкет rect1 != rect2<br />");
+        }
+
+        document.write("<br/><br/>использование compareTo()<br/><br/>");
+
+        if (rect1.compareTo(rect2) > 0)/*rect1 > rect2*/ {
+            document.write("Объкет rect1 > rect2<br />");
+        }
+        if (rect1.compareTo(rect2) < 0)/*rect1 < rect2*/ {
+            document.write("Объкет rect1 < rect2<br />");
+        }
+        if (rect1.compareTo(rect2) <= 0)/*rect1 <= rect2*/ {
+            document.write("Объкет rect1 <= rect2<br />");
+        }
+        if (rect1.compareTo(rect2) >= 0)/*rect1 >= rect2*/ {
+            document.write("Объкет rect1 >= rect2<br />");
+        }
+        if (rect1.compareTo(rect2) == 0)/*rect1 == rect2*/ {
+            document.write("Объкет rect1 == rect2<br />");
+        }
+        if (rect1.compareTo(rect2) != 0)/*rect1 != rect2*/ {
+            document.write("Объкет rect1 != rect2<br />");
+        }
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

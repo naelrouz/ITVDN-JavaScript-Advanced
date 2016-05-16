@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Computed Styles (Вычесляемые свойства)</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+            div#first {
+                background-color: green;
+            }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var div1 = document.getElementById("first"),
+                div2 = document.getElementById("second");
+
+            document.getElementById("btn1").onclick = function () {
+                alert("First div style - " + getStyle(div1, "backgroundColor"));
+            }
+
+            document.getElementById("btn2").onclick = function () {
+                alert("Second div style - " + getStyle(div2, "backgroundColor"));
+            }
+
+            // getComputedStyle - метод позволяет получить доступ к вычисляемым стилям.
+
+            function getStyle(element, styleName) {
+                if (element.currentStyle) { // получение доступа к Computed стилям для IE
+                    return element.currentStyle[styleName];
+                }
+                else if (window.getComputedStyle) { 
+                    return window.getComputedStyle(element, null)[styleName];
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--Для данного блока цвет задается через CSS стили определенные в элементе style в начале файла.-->
+    <div id="first"></div>
+
+    <!--Для данного блока установлены inline стили-->
+    <div id="second" style="background-color: red"></div>
+
+    <button id="btn1">Get first styles</button>
+    <button id="btn2">Get second styles</button>
+</body>
+</html>

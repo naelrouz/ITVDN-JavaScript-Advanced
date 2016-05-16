@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Объект Navigator</title>
+    <script type="text/javascript">
+        // Объект Navigator поддерживает пять свойств, по которым можно опередить версию браузера.
+        // appName - Название веб браузера.
+        // appVersion - Номер версии или другая информация о браузере
+        // userAgent - строка, которую браузер посылает в HTTP заголовке USER-AGENT
+        // appCodeName - Кодовое имя браузера. Для Netscape используется кодовое имя "Mozilla" Для совместимости IE делает то же самое.
+        // platform - Аппаратная платформа, на которой работает браузер.
+
+        var browserInfo = "СВЕДЕНЬЯ О БРОУЗЕРЕ:\n";
+        for (var propname in navigator) {
+            browserInfo += propname + ": " + navigator[propname] + "\n";
+        }
+        alert(browserInfo);
+    </script>
+</head>
+<body>
+</body>
+</html>

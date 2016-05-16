@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>setInterval</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var counter = 0;
+
+            function Count() {
+                counter++;
+                document.getElementById("output").innerHTML = counter;
+            }
+
+            // setInterval - планирование запуска указанной функции с заданным интервалом. Планирование и запуск будут происходить многократно.
+            // запускать функцию Count с интервалом в 1 секунду
+            setInterval(Count, 1000);
+        }
+    </script>
+</head>
+<body>
+    <p id="output">0</p>
+</body>
+</html>
+
+
+

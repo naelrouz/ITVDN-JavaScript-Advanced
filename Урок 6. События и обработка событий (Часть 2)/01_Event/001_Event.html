@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Объект Event</title>
+    <script>
+        window.onload = handler;
+
+        // параметр e будет передаваться в IE только при регистрации события через attachEvent
+        function handler(e){
+            if (!e) e = window.event; // получение информации о событии в IE
+            // тело обработчика события
+        }
+
+        function handler2(event) {
+            var e = event || window.event; // второй вариант.
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

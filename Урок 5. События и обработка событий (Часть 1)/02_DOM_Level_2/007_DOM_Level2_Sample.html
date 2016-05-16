@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Пример использования событий DOM Level 2</title>
+    <style>
+        #wrapper p {
+            width:100px;
+            height:100px;
+            background-color:green;
+            float:left;
+            margin:10px;
+        }
+    </style>
+
+    <script>
+
+        window.addEventListener("load", function () {
+
+            var wrapper = document.getElementById("wrapper");
+
+            // e - объект события которое возникло в элементе wrapper или в его дочерних элементах
+            wrapper.addEventListener("click", function (e) {
+                // target - элемент, который был инициатором события.
+                e.target.style.backgroundColor = "red";
+            }, false);
+
+        }, false);
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>

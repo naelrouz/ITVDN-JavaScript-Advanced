@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Обработчик события как атрибут</title>
+    <script type="text/javascript">
+        function validate() {
+            // проверка формы.
+            alert("validate");
+        }
+    </script>
+</head>
+<body>
+    <!--Обработчик события click-->
+    <input type="button" name="button1" value="Click me" onclick="alert('Hello')" />
+
+    <!--Если обработчик состоит из нескольких инструкций, они должны быть отделены ';'-->
+    <input type="button" name="button1" value="Click me" onclick="if (window.counter) counter++; else counter = 1; this.value = counter;" />
+
+    <form>
+        <input type="text" name="firstName" />
+        <br />
+        <!--Если обработчик возвращает false действие отменяется.-->
+        <input type="reset" onclick="return confirm('Вы уверены?')" />
+        
+        <!--Обработчик установлен как функция из тега script-->
+        <input type="submit" onclick="validate()" />
+    </form>
+</body>
+</html>

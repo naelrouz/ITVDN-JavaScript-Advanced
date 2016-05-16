@@ -1,0 +1,57 @@
+﻿<!--
+Полиморфи́зм (в языках программирования) — возможность объектов с одинаковой спецификацией иметь различную реализацию.
+-->
+
+<html>
+<head>
+    <title>Полиморфизм в JavaScript</title>
+
+     <script type="text/javascript">
+         // Наследование
+
+         // базовая функция-конструктор
+         function Human(name) {
+             this.name = name;
+             this.talk = function () { document.write("Hello My Name is " + this.name + "<br />") }
+         }
+
+         // производная функция конструктор
+         function Student(name) {
+             this.name = name;
+             this.school = "CBS school";
+         }
+
+         function Worker(name) {
+             this.name = name;
+             this.speciality = "Software developer";
+
+             // переопределение метода из базовой функции-конструктора (override).
+             this.talk = function () { document.write("Привет мое имя " + this.name + "<br />") }
+         }
+
+         // Создаем экземпляр родителя
+         var human = new Human("name");
+         //human.talk(); 
+
+         // наследуем Student и Worker от Human устанавливая функцию как прототип.
+         Student.prototype = human;
+         Worker.prototype = human;
+
+         var Alex = new Student("Alexander");
+         var Andrew = new Worker("Andrew");
+
+         document.write("<br />Student<br />");
+
+         Alex.talk();
+         document.write(Alex.school);
+
+         document.write("<br />Worker<br />");
+
+         Andrew.talk();
+         document.write(Andrew.speciality);
+    </script>
+
+</head>
+<body>
+</body>
+</html>

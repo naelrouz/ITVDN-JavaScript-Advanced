@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>AJAX Timeout</title>
+    <script>
+        window.onload = function () {
+            document.getElementById("buttonGet").onclick = function () {
+                var xhr = new XMLHttpRequest();
+                // время ожидания.
+                var timeout = 20000;
+                // запуск функции отмены запроса через указанный промежуток времени.
+                var timer = setTimeout(function () { xhr.abort(); alert("aborted"); }, timeout);
+
+                xhr.open("GET", "TestHandler.ashx");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        clearTimeout(timer); // отмена запуска abort() метода если пришел ответ от сервера.
+                        document.getElementById("output").innerHTML = xhr.responseText;
+                    }
+                }
+                xhr.send();
+            }
+        }
+    </script>
+</head>
+<body>
+    <input id="buttonGet" type="button" value="Get Data" />
+    <p id="output"></p>
+</body>
+</html>

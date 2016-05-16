@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Свойства и методы</title>
+
+    <script type="text/javascript">
+        function Point(x, y) {
+
+            // свойства экземпляра
+            this.x = x;
+            this.y = y;
+
+            // метод экземпляра
+            this.print = function () {
+                document.write("(" + this.x + ", " + this.y + ")<br />");
+            }
+        }
+
+        // свойство функции конструктора (аналог статических свойств).
+        Point.MaxPointCount = 100;
+
+        // Метод функции-конструктора (аналог статическгого метода).
+        Point.getOrigin = function () {
+            return new Point(0, 0) // this использовать недопустимо.
+        }
+
+        // создание экземпляров и работа с свойствами и методами экземпляров.
+        var p1 = new Point(100, 200);
+        p1.x = 300;
+        p1.y = 400;
+        p1.print();
+
+        var p2 = new Point(100, 200);
+        p2.print();
+
+        // работа с свойством и методом функции-конструктора.
+        Point.MaxPointCount = 10;
+        Point.getOrigin().print();
+    </script>
+
+</head>
+<body>
+</body>
+</html>

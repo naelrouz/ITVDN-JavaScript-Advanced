@@ -1,0 +1,56 @@
+﻿/*
+    CSS правило
+
+    selector {
+        свойство: значение;
+    }
+
+    p {
+        border: 1px;
+    }
+
+    p - селектор (selector)
+    border - свойство (property)
+    1px - значение (value)
+    border: 1px; - определение (declaration)
+*/
+
+/* Стиль для элемента body*/
+body
+{   
+    background-color:Teal;
+    font-family:Segoe UI, Verdana, Tahoma;
+}
+
+/* Стиль для всех элементов div и p*/
+div, p
+{
+    font-style:italic;
+}
+
+/* Стиль для всех элементов со значение test в атрибуте class ( <div class="test"></div>) */
+.test
+{
+    color:Red;
+    font-size:20px;
+    font-weight:bold;    
+}
+
+/*стиль для элемента с id test3 ( <div id="test3"></div>) */
+#test3
+{
+    padding:10px;
+    border:solid 1px red;    
+}
+
+/*Стиль для элементов p со значением test2 в атрибуте class (<p class="test2"></p>)*/
+p.test2
+{
+    text-decoration:underline;    
+}
+
+/*Стиль для элементов li, которые находиться в элементе ul */
+ul li
+{
+    color:Yellow;    
+}

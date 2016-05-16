@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Кэширование изображений</title>
+</head>
+<body>
+    
+    <script>
+        var images = []
+
+        function preload() {
+            for (i = 0; i < preload.arguments.length; i++) {
+                images[i] = new Image()
+                images[i].src = preload.arguments[i]
+            }
+        }
+
+        preload(
+            "images/frame1.jpg",
+            "images/frame2.jpg",
+            "images/frame3.jpg",
+            "images/frame4.jpg",
+            "images/frame5.jpg"
+        )
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>Date</title>
+</head>
+<body>
+
+    <script type="text/javascript" language="JavaScript">
+        var now = new Date(); // ќбъект Date с текущей датой и временем.
+        document.write("<strong>текуща€ дата= </strong>" + now + "<br />");
+
+        var now = new Date(5000); // ѕараметр - количество миллисекунд между нужной датой и полночью 1 €нвар€ 1970
+        document.write("<strong>date1 = </strong>" + now + "<br />");
+        
+        var date = new Date("December 25, 1995 21:46:10");
+        document.write("<strong>date2 = </strong>" + date + "<br />");
+
+        var date2 = new Date("03/09/2000"); // полночь 9 марта 2000 года
+        document.write("<strong>date3 = </strong>" + date2 + "<br />");
+
+        // Date(год, мес€ц, день, часы, минуты, секунды, мс)
+        var date3 = new Date(2000, 2, 9); // полночь 9 марта 2000 года
+        document.write("<strong>date4 = </strong>" + date3 + "<br />");
+    </script>
+
+</body>
+</html>

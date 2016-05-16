@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>fillRect()</title>
+    <script type="text/javascript">
+        function draw() {
+
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+
+            // заполнение прямоугольной области синим цветом.
+            context.fillStyle = "blue";
+            context.fillRect(100, 100, 50, 50);
+
+            // вычерчивание красной границы толщиной в 10 пикселей
+            context.strokeStyle = "red";
+            context.lineWidth = 10;
+            context.strokeRect(100, 100, 50, 50);
+
+            // очистка прямоугольной области от контента.
+            context.clearRect(125, 125, 35, 35);
+        }
+
+        if (window.addEventListener)
+            window.addEventListener("load", draw, true);
+    </script>
+</head>
+<body>
+    <canvas id="canvas" height="300" width="300" style="border: solid 1px black;">
+        Ваш браузер не поддерживает элемент <b>Canvas</b>
+    </canvas>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Отправка GET параметров</title>
+    <script>
+        window.onload = function () {
+            var xhr = new XMLHttpRequest();
+
+            // настройка объекта запроса с указание метода отправи запроса и данных
+            xhr.open("GET", "GetHandler.ashx?a=hello&b=world"); 
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("output").innerHTML = xhr.responseText;
+                }
+            }
+
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <p id="output"></p>
+</body>
+</html>

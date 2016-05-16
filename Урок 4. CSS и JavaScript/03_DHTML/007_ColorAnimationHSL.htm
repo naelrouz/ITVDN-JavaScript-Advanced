@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Анимация цвета</title>
+</head>
+<body>
+
+    <!-- HSL Hue, Saturation, Lightness (Intensity) - Цветовая модель, в которой цветовымикоординатами является цвет, насыщенность и яркость.
+        http://ru.wikipedia.org/wiki/HSL -->
+    <div id="rect">
+    </div>
+
+    <script type="text/javascript">
+        var e = document.getElementById("rect");
+
+        e.style.width = "100px";
+        e.style.height = "100px";
+        e.style.border = "solid black 1px";
+
+        var color = 0;
+
+        setInterval(function () {
+            color = color + 1 % 360;
+            e.style.backgroundColor = "hsl(" + color + ", 100%, 50%)"; // hsl(0, 100%, 50%)
+        }, 50);
+    </script>
+</body>
+</html>

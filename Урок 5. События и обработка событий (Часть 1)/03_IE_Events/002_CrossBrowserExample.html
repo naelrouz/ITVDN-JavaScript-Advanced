@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Универсальная обработка событий</title>
+
+    <script>
+        // В последних версиях IE (>=9 IE) также поддерживается метод addEventListener
+        if (window.addEventListener)
+            window.addEventListener("load", init, false);
+        else if (window.attachEvent)
+            window.attachEvent("onload", init);
+
+        function init() {
+            var e = document.getElementById("button");
+            if (e.addEventListener) e.addEventListener("click", handler, false);
+            if (e.attachEvent) e.attachEvent("onclick", handler);
+        }
+
+        function handler() {
+            alert("Hello world");
+        }
+    </script>
+
+</head>
+<body>
+    <input id="button" type="button" value="Кнопка" />
+</body>
+</html>

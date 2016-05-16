@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Модель событий IE</title>
+    <script>
+        window.attachEvent("onload", function () {
+            var e = document.getElementById("btn");
+            var eRemove = document.getElementById("btnRemove");
+
+            // установка обработчика на событие click
+            // В модели IE нет понятия перехвата события, но есть понятие всплывания.
+            // для того что бы прекратить распространение при всплывании используется e.cancelBubble = true
+            e.attachEvent("onclick", handler);
+            eRemove.attachEvent("onclick", function () {
+                // удаление обработчика
+                e.detachEvent("onclick", handler);
+            });
+
+            function handler() {
+                alert("Обработчик события");
+            }
+        });
+    </script>
+</head>
+<body>
+    <input id="btn" type="button" value="Кнопка" />
+    <input id="btnRemove" type="button" value="Удалить обработчик" />
+</body>
+</html>

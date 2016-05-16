@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Фильтрация ввода с клавиатуры</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, 'DejaVu Sans', sans-serif;
+        }
+
+        label {
+            width: 150px;
+            float: left;
+        }
+
+        /*стиль для span, которые расположены в разметке сразу за input*/
+        input + span {
+            visibility: hidden;
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        window.addEventListener("load", init, false);
+
+        function init() {
+
+            var inputs = document.getElementsByTagName("input");
+
+            for (var i = 0; i < inputs.length; i++) {
+                var e = inputs[i];
+                if (e.type != "text") continue; // пропускаем элементы input, которые не поля вводов
+                if (e.dataset.charsAllowed == undefined) continue; // пропускаем элементы у которых нет атрибута data-chars-allowed
+
+                // dataset - свойство, дающее возможность обратиться к атрибутам data-*
+                // другой способ получения атрибута
+                //if(e.getAttribute("data-chars-allowed") == undefined)
+
+                e.addEventListener("keypress", keyFilter, false);
+            }
+
+            function keyFilter(e) {
+                if (!e) e = window.event;
+
+                // если нажата функциональная клавиша или введена управляющая последовательность (например, нажата клавиша Enter)
+                if (e.charCode == 0 || e.charCode < 32) return true;
+
+                var allowedText = e.target.dataset.charsAllowed;
+                var element = e.target.dataset.messageId; // элемент, который необходимо отобразить в случае ошибки
+
+                var symbol = String.fromCharCode(e.charCode).toLowerCase();
+
+                if (allowedText.search(symbol) == -1) {
+                    if (element) {
+                        element = document.getElementById(element);
+                        element.style.visibility = "visible";
+                    }
+                    // отменяем ввод символа в поле ввода
+                    e.preventDefault();
+                    return false;
+                }
+                else {
+                    if (element) {
+                        element = document.getElementById(element);
+                        element.style.visibility = "hidden";
+                    }
+                    return true;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <label>Имя</label>
+        <input type="text" name="firstName" data-chars-allowed="абвгдеёжзийклмнопрстуфхцчэюя" data-message-id="firstNameError" />
+        <span id="firstNameError">допускаются только буквы русского алфавита</span>
+    </p>
+    <p>
+        <label>Почтовый индекс</label>
+        <input type="text" name="zip" data-chars-allowed="1234567890" data-message-id="zipError" />
+        <span id="zipError">допускаются только цифры</span>
+    </p>
+</body>
+</html>
