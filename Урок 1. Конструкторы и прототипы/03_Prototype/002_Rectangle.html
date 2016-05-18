@@ -18,7 +18,25 @@
         }
 
         var rect = new Rectangle(100, 50);
+        var rect2 = new  Rectangle(200,200);
         document.write("Площадь прямоугольника " + rect.getArea());
+        document.write('<br> S rectangle = ' + rect2.getArea());
+
+        /*==========================================================*/
+
+        function Circle(R){
+            this.radius = R;
+        }
+
+        //Pi*(R*R)
+        Circle.prototype.getCircleS = function(){
+            var R = this.radius;
+            var Pi = Math.PI;
+            return Pi*(R*R);
+        }
+
+        var circle1 = new Circle(3);
+        document.write('<br>' + circle1.getCircleS());
     </script>
 
 </head>

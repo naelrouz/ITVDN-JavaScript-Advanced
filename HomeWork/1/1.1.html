@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1.1</title>
+
+</head>
+<body>
+<p>
+<h3>Задание 1</h3>
+Создайте функцию конструктор,
+которая создает объект со свойством экземпляра,
+свойством функции-конструктора,
+с методом экземпляра и методом функции-конструктора
+имена выберите произвольно.
+</p>
+<script> "use strict"
+    // Функция конструктор
+    var objConstruct = function (objProperty)
+    {
+        // Свойство(а) экземпляра
+        this.objProperty = objProperty;
+        // Метод экземпляра
+        this.objMethod = function () {
+            document.write('<br> Сработал Метод экземпляра')
+        }
+
+        // Cвойство функции-конструктора.
+        objConstruct.objConProp = 'Значение свойства функции-конструктора.';
+        // Метод функции-конструктора
+        objConstruct.objConMethod = function(){
+            document.write('<br> Сработал Метод функции-конструктора')
+        }
+
+    }
+
+
+var obj1 = new objConstruct('Значение свойства обьекта, переданное при создании обьекта.');
+
+// Выводим Значение свойства обьекта.
+    document.write('<br>' + obj1.objProperty);
+// Вызываем Метод экземпляра
+    obj1.objMethod();
+    document.write('<hr>');
+
+// Выводим Значение свойства функции-конструктора.
+    document.write('<br>' + objConstruct.objConProp);
+// Вызываем Метод функции-конструктора
+    objConstruct.objConMethod();
+</script>
+</body>
+</html>

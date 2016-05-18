@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1.2</title>
+
+</head>
+<body>
+<p>
+<h3>Задание 2</h3>
+
+<p>
+    Разработайте функцию-конструктор,
+    которая будет создавать объект Human(человек)
+    создайте массив объектов и реализуйте функцию,
+    которая будет сортировать элементы массива по значению
+    свойства Age по возрастанию или по убыванию.
+</p>
+
+</p>
+<script> "use strict"
+// Hrlpers functions
+function echo(argument){
+    document.write('<br>' + argument);
+}
+// Функция конструктор Human obj
+var Human = function (index)
+{
+    // Метод создания обьекта
+    Human.newObj = function(){
+        return new constHuman();
+    }
+
+    // Индекс в массиве при создании
+    this.index = index;
+
+}
+var Humans  = new Array(5);
+
+for (var i = 0; i < Humans.length; i++) {
+    Humans[i] = new Human('Текущий индекс = ' + i);
+    Human.age = Math.random()
+
+}
+
+Humans.forEach(function(item, i, Humans) {
+    //echo( i + ": " + item + " (массив:" + Humans + ")" );
+    echo(item.index);
+});
+
+//echo(Humans[0].index);
+
+
+
+</script>
+</body>
+</html>
