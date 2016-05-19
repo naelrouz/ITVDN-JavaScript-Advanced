@@ -4,20 +4,23 @@
     <title>Работа с узлами DOM - Свойства</title>
 
     <script type="text/javascript">
-        window.onload = function () {
+        window.onload = function ()
+        {
 
             var e = document.getElementById("list");
 
             // childNodes - получение всех дочерних узлов.
-            for (var i = 0; i < e.childNodes.length; ++i) {
-                var temp = e.childNodes[i];
+            for (var i = 0; i < e.childNodes.length; ++i)
+            {
+                var arrayElement = e.childNodes[i];
 
                 // если найденный узел не элемент то пропустить его
-                if (temp.nodeType != 1) {
+                if ( arrayElement.nodeType != 1) {
                     continue;
                 }
 
-                e.childNodes[i].style.color = "red";
+                arrayElement.style.color = "red";
+                alert(arrayElement.nodeType);
             }
         }
     </script>

@@ -19,37 +19,118 @@
 
 </p>
 <script> "use strict"
-// Hrlpers functions
-function echo(argument){
-    document.write('<br>' + argument);
-}
-// Функция конструктор Human obj
-var Human = function (index)
-{
-    // Метод создания обьекта
-    Human.newObj = function(){
-        return new constHuman();
+/*
+ * Вспомогательная функция вывода на экран.
+ * Обворачивает переданные даные в переданный HTML тег
+ * */
+function echo(tag, string) {
+    // Инициализируем переменные
+    var tagOpen, tagClose;
+    switch (tag) { // Быбор зажанного html тега
+
+        case "p":
+        {
+            tagOpen = '<p>';
+            tagClose = '</p>';
+        }
+            break;
+
+        case "br":
+        {
+            tagOpen = '<br>';
+            tagClose = '';
+        }
+            break;
+        case "pre":
+        {
+            tagOpen = '<pre>';
+            tagClose = '</pre>';
+        }
+            break;
+//        default:
+//        {}break;
     }
 
-    // Индекс в массиве при создании
-    this.index = index;
-
+    document.write(tagOpen + string + tagClose);
 }
-var Humans  = new Array(5);
 
-for (var i = 0; i < Humans.length; i++) {
+var Human = function (index) {
+
+    // Свойства
+    this.index = index; // Индекс в массиве при создании
+    this.name = 'Имя не задано';
+    this.age = 'Возраст не задан';
+
+    // Методы
+    Human.newObj = function () { // Метод создания обьекта
+        return new constHuman();
+    }
+}
+
+var Humans = new Array();
+var humasNames =
+        [
+            'Виктор',
+            'Иван',
+            'Борис',
+            'Олег',
+            'Николай'
+        ];
+var minAge = 21, maxAge = 55;
+
+for (var i = 0; i < humasNames.length; i++) {
     Humans[i] = new Human('Текущий индекс = ' + i);
-    Human.age = Math.random()
+    Humans[i].name = humasNames[i];
+    Humans[i].age = Math.floor(Math.random() * (maxAge - minAge) + minAge);
 
 }
 
-Humans.forEach(function(item, i, Humans) {
-    //echo( i + ": " + item + " (массив:" + Humans + ")" );
-    echo(item.index);
+echo('p', 'Вывод свойст обьектов в массиве. Свойство объектов, age генирируется при запуске сценария. ');// Вывод исходного массива
+Humans.forEach(function (item, i, Humans) {
+    echo('pre', i + ' | ' + item.name + ' | ' + item.age);
 });
 
-//echo(Humans[0].index);
+// Сортируме масссив с объектами
+var sortHumanToAge = sortArrayToProperty(Humans);
 
+// Вывод отсортированого массива, по свойству age
+echo('br', 'Вывод отсортированого, по свойству age, массива объектов.');
+
+echoArrayOfObjects(sortHumanToAge);
+
+
+// --------------------------------------------------------- Функции ------------------------------------
+
+function echoArrayOfObjects(Array) //
+{
+    Array.forEach(function (item, i, Humans) {
+        echo('pre', i + ' | ' + item.name + ' | ' + item.age);
+    });
+}
+
+// Функция сортировки массива обьектов по свойству
+function sortArrayToProperty(arrayOfObjects) //
+{
+    var size = arrayOfObjects.length;
+
+    for (var i = 0; i < size; ++i) // i - номер текущего шага
+    {
+        var pos = i;
+        var tmp = arrayOfObjects[i];
+        for (var j = i + 1; j < size; ++j) // цикл выбора наименьшего элемента
+        {
+            if (arrayOfObjects[j].age < tmp.age) {
+                pos = j;
+                tmp = arrayOfObjects[j];
+
+
+                arrayOfObjects[pos] = arrayOfObjects[i];
+                arrayOfObjects[i] = tmp; // меняем местами наименьший с a[i]
+            }
+        }
+    }
+    return arrayOfObjects;
+}
 
 
 </script>
