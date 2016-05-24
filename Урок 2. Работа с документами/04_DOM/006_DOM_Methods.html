@@ -2,8 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Работа с узлами DOM - методы</title>
-    <script>
-        // Методы для работы с DOM
+    <script> "use strict";
+
+    // Методы для работы с DOM
         // appendChild - добавить дочерний элемент
         // insertBefore - добавить элемент перед указанным
         // removeChild - удаление элемента
@@ -19,12 +20,33 @@
             var p2 = document.createElement("p");
             p2.innerHTML = "Paragraph 2";
             document.body.insertBefore(p2, div1);
+
+//  <!--ClassWork-->
+            var div2 = document.getElementById('div2');
+            var h4 = document.createElement('h4');
+            h4.innerHTML = 'Вствка h4 по средствам ' +
+                    'JavaScript, в качестве дочернего для #div2';
+            div2.appendChild(h4);
+
+            var h3 = document.createElement('h3');
+            h3.innerHTML = 'Вствка h3 по средствам ' +
+                    'JavaScript, перед #div2';
+            document.body.insertBefore(h3,div2)
+
+
+
+
+
+
         }
 
     </script>
 </head>
 <body>
-    <div id="div1" style="border:solid 1px red; padding:10px; margin:10px;">
-    </div>
+<div id="div1" style="border:solid 1px red; padding:10px; margin:10px;">
+</div>
+<!--ClassWork-->
+<div id="div2" style="border:solid 2px #81e569; padding:10px; margin:10px;">
+</div>
 </body>
 </html>
