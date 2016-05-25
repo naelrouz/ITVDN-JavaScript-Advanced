@@ -12,6 +12,14 @@
                 // смена CSS атрибута color для всех параграфов
                 paragraphs[i].style.color = "red";
             }
+
+            var titles = document.getElementsByTagName('h4');
+            console.log(titles);
+            for (var i = 0; i < titles.length; i++) {
+                var obj = titles[i];
+                obj.style.color = 'red';
+            }
+            titles['4'].style.color = '#777';
         }
     </script>
 </head>
@@ -21,5 +29,8 @@
     <p>Hello world!!!</p>
     <p>Hello world!!!</p>
     <p>Hello world!!!</p>
+
+
+    <h4>Lorem 1</h4><h4>Lorem 2</h4><h4>Lorem 3</h4><h4>Lorem 4</h4><h4>Lorem 5</h4><h4>Lorem 6</h4>
 </body>
 </html>
