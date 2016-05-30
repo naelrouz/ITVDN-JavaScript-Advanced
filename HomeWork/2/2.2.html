@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.2</title>
+    <script>
+        var i = 0;
+        function createNewChild() {
+            ++i;
+            //alert('createNewChild');
+            var paragraphs = document.getElementsByTagName("p");
+            var div = document.getElementById("div");
+            // создание элемента p
+            var item = document.createElement("p");
+
+            if (paragraphs.length < 3) {
+
+                item.innerHTML = 'NEW ITEM ' + i;
+                // добавление созданного элемента в конце.
+                div.appendChild(item);
+            } else {
+                i = 0;
+                do {
+                    var list = document.getElementById("div");
+                    var item = list.lastChild;
+
+                    // удаление выбранного элемента из дерева.
+                    list.removeChild(item);
+
+                } while (list.lastChild != null)
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+<input type="button" onclick="createNewChild()" style="width: 210px;" value="Добавить элемент"/><br/>
+<br>
+<div id="div"></div>
+
+
+
+</body>
+</html>

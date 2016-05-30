@@ -10,58 +10,12 @@
 
 
 
-<script>
-    var Paragraph = {};
-    Paragraph.replaceText = function ()
-    {
-        alert('Обьект');
-
-        var paragraphs = document.getElementsByTagName("p");
-        for (var i = 0; i < paragraphs.length; i++) {
-            // смена CSS атрибута color для всех параграфов
-            paragraphs[i].innerHTML = 'paragraph';
-        }
-    };
-
-    (function () {// Определяем анонимную функцию.
-        // Отсутствие имени означает отсутствие глобального имени
-        alert('Анонимная функция');
-        // Тело функции
-        // здесь можно объявлять любые переменные - это не приведет к созданию глобальных переменных.
-
-        var paragraphs = document.getElementsByTagName("p");
-        for (var i = 0; i < paragraphs.length; i++) {
-            // смена CSS атрибута color для всех параграфов
-            paragraphs[i].innerHTML = 'paragraph';
-        }
-
-    })(); // конец определения функции и ее вызов.
-
-    (function () {// Определяем анонимную функцию.
-        // Отсутствие имени означает отсутствие глобального имени
-
-        // Тело функции
-        // здесь можно объявлять любые переменные - это не приведет к созданию глобальных переменных.
-
-        var message = "Hello from module3"; //  переменная не глобальная
-
-        alert(message);
-
-    })(); // конец определения функции и ее вызов.
-
-
-    //window.onload = Paragraph.replaceText;
-
-
-</script>
 
 <p style="color:green">Hello world!!!</p>
 <p id="paragraph">Hello world!!!</p>
 <p>Hello world!!!</p>
 <p>Hello world!!!</p>
 <p>Hello world!!!</p>
-
-
 
 <div class="wrapper">
     <section class="panel _nav">
@@ -243,6 +197,18 @@
         </section>
     </main>
 </div>
-<script src="/help/app/app.js"></script>
+<script>
+    var Paragraph = {};
+    Paragraph.replaceText = function () {
+        alert('Обьект');
+
+        var paragraphs = document.getElementsByTagName("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].innerHTML = 'paragraph';
+        }
+    };
+    Paragraph.replaceText();
+</script>
+<script src="af.js"></script>
 </body>
 </html>

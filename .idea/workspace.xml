@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1230d627-0a24-4986-8015-21313a0ab53e" name="Default" comment="HW #2.1">
+    <list default="true" id="1230d627-0a24-4986-8015-21313a0ab53e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HomeWork/2/2.2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HomeWork/2/af.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HomeWork/2/2.1.html" afterPath="$PROJECT_DIR$/HomeWork/2/2.1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/006_getElementsByTagName.html" afterPath="$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/006_getElementsByTagName.html" />
     </list>
     <ignored path="ITVDN-JavaScript-Advanced.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,21 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="008_DOM.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/04_DOM/008_DOM.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.806452">
-              <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2.1.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2.1.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HomeWork/2/2.1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5185185">
-              <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+            <state vertical-scroll-proportion="-18.096775">
+              <caret line="204" column="8" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="60" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -46,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="003_GoodPage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option2/003_GoodPage.html">
+      <file leaf-file-name="af.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HomeWork/2/af.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -58,16 +52,6 @@
       </file>
       <file leaf-file-name="Module3.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option2/Module3.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Module4.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option2/Module4.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
@@ -79,52 +63,70 @@
       <file leaf-file-name="006_getElementsByTagName.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/006_getElementsByTagName.html">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.612904">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="002_DocumentProperties.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/002_DocumentProperties.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.161291">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="003_getElementById.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/003_getElementById.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.8387096">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="008_DOM.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/04_DOM/008_DOM.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.774194">
+              <caret line="78" column="13" selection-start-line="73" selection-start-column="12" selection-end-line="78" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2.2.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HomeWork/2/2.2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.45679012">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="005_getElementsByName.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/005_getElementsByName.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.064516">
+              <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="004_getElementById.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/004_getElementById.html">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-17.741936">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="002_GoodPage.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option1/002_GoodPage.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Module1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option1/Module1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="1" selection-start-line="8" selection-start-column="0" selection-end-line="14" selection-end-column="1" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Module2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option1/Module2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="009_SortingDom.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/04_DOM/009_SortingDom.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.870968">
-              <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,7 +162,11 @@
         <option value="$PROJECT_DIR$/Урок 2. Работа с документами/04_DOM/005_nextSibling.html" />
         <option value="$PROJECT_DIR$/Урок 2. Работа с документами/04_DOM/006_DOM_Methods.html" />
         <option value="$PROJECT_DIR$/Урок 2. Работа с документами/04_DOM/007_DOM_Attributes.html" />
+        <option value="$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option2/003_GoodPage.html" />
+        <option value="$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/006_getElementsByTagName.html" />
+        <option value="$PROJECT_DIR$/HomeWork/2/af.js" />
         <option value="$PROJECT_DIR$/HomeWork/2/2.1.html" />
+        <option value="$PROJECT_DIR$/HomeWork/2/2.2.html" />
       </list>
     </option>
   </component>
@@ -382,6 +388,9 @@
     <property name="SearchEverywhereHistoryKey" value="live tem&#9;ACTION&#9;InsertLiveTemplate" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\itvdn-javascript-advanced\HomeWork\2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\IVNovoselov\Documents\WebProjects\ITVDN-JavaScript-Advanced\HomeWork" />
     </key>
@@ -439,7 +448,13 @@
       <option name="project" value="LOCAL" />
       <updated>1464588572536</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="HW #2.1">
+      <created>1464589345468</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1464589345468</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -507,20 +522,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Урок 1. Конструкторы и прототипы/01_BasicConstructors/004_String().htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38901603">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Урок 1. Конструкторы и прототипы/02_CustomConstructors/004_Props_and_methods.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5711009">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Урок 1. Конструкторы и прототипы/02_CustomConstructors/003_Ctor_Example.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20183486">
@@ -710,41 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/001_DocumentWrite.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.225806">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/002_DocumentProperties.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="49.935482">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/003_getElementById.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8387096">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/004_getElementById.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.741936">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/005_getElementsByName.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.064516">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/04_DOM/005_nextSibling.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -804,14 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/04_DOM/008_DOM.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.806452">
-          <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option1/Module2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -822,42 +780,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/04_DOM/009_SortingDom.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.870968">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option1/002_GoodPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/006_getElementsByTagName.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.741936">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option2/003_GoodPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option2/Module4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -872,21 +798,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option2/Module4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/04_DOM/009_SortingDom.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.387096">
+          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/001_DocumentWrite.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.16129">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/002_DocumentProperties.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.161291">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/004_getElementById.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.741936">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/003_getElementById.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8387096">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/006_getElementsByTagName.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.612904">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option2/003_GoodPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24691358">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeWork/2/af.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/02_JS_Module/BestPractice_Option2/Module3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="46" />
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HomeWork/2/2.1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5185185">
-          <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+        <state vertical-scroll-proportion="-18.096775">
+          <caret line="204" column="8" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="60" />
           <folding>
             <element signature="n#style#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/04_DOM/008_DOM.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.774194">
+          <caret line="78" column="13" selection-start-line="73" selection-start-column="12" selection-end-line="78" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Урок 2. Работа с документами/03_Document/005_getElementsByName.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.064516">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HomeWork/2/2.2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45679012">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
