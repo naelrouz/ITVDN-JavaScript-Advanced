@@ -1,0 +1,248 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>2.1</title>
+    <!--<link rel="stylesheet" href="https://www.jetbrains.com/help/app/app.css">-->
+</head>
+<body data-id="topicId993904">
+
+
+
+<script>
+    var Paragraph = {};
+    Paragraph.replaceText = function ()
+    {
+        alert('Обьект');
+
+        var paragraphs = document.getElementsByTagName("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+            // смена CSS атрибута color для всех параграфов
+            paragraphs[i].innerHTML = 'paragraph';
+        }
+    };
+
+    (function () {// Определяем анонимную функцию.
+        // Отсутствие имени означает отсутствие глобального имени
+        alert('Анонимная функция');
+        // Тело функции
+        // здесь можно объявлять любые переменные - это не приведет к созданию глобальных переменных.
+
+        var paragraphs = document.getElementsByTagName("p");
+        for (var i = 0; i < paragraphs.length; i++) {
+            // смена CSS атрибута color для всех параграфов
+            paragraphs[i].innerHTML = 'paragraph';
+        }
+
+    })(); // конец определения функции и ее вызов.
+
+    (function () {// Определяем анонимную функцию.
+        // Отсутствие имени означает отсутствие глобального имени
+
+        // Тело функции
+        // здесь можно объявлять любые переменные - это не приведет к созданию глобальных переменных.
+
+        var message = "Hello from module3"; //  переменная не глобальная
+
+        alert(message);
+
+    })(); // конец определения функции и ее вызов.
+
+
+    //window.onload = Paragraph.replaceText;
+
+
+</script>
+
+<p style="color:green">Hello world!!!</p>
+<p id="paragraph">Hello world!!!</p>
+<p>Hello world!!!</p>
+<p>Hello world!!!</p>
+<p>Hello world!!!</p>
+
+
+
+<div class="wrapper">
+    <section class="panel _nav">
+        <header class="panel__header">
+            <div class="container">
+                <form class="search-box"><label for="search-box__input" class="search-box__label">
+                    <input type="text"
+                           class="search-box__input"
+                           id="search-box__input"
+                           placeholder="Search PhpStorm Help"></label>
+                    <div class="search-box__clear" title="Clear"></div>
+                </form>
+            </div>
+        </header>
+        <nav class="panel__content">
+            <div class="container _nav">
+                <menu class="nav-tree"></menu>
+            </div>
+            <div class="container _footer panel__footer"><p><a href="#">Send feedback</a></p></div>
+        </nav>
+    </section>
+    <main class="panel _main">
+        <header class="panel__header">
+            <div class="container"><h3>PhpStorm 2016.1 Help</h3>
+                <div class="shortcuts-switcher"><label for="switch-shortcuts">Keymap:</label><select
+                        id="switch-shortcuts" class="select _shortcuts" height="1">
+                    <option data-group="primary" value="default" selected>Default (Windows/Linux)</option>
+                    <option data-group="primary" value="default_for_gnome">GNOME</option>
+                    <option data-group="primary" value="default_for_kde">KDE</option>
+                    <option data-group="primary" value="default_for_xwin">XWindow</option>
+                    <option data-group="primary" value="emacs">Emacs</option>
+                    <option data-group="primary" value="visual_studio">Visual Studio</option>
+                    <option data-group="primary" value="netbeans_6.5">NetBeans 6.5</option>
+                    <option data-group="primary" value="eclipse">Eclipse</option>
+                    <option data-group="secondary" value="mac_os_x_10.5_">Default (Mac OS X 10.5+)</option>
+                    <option data-group="secondary" value="mac_os_x">OS X</option>
+                    <option data-group="secondary" value="eclipse_mac_os_x">OS X Eclipse</option>
+                    <option data-group="secondary" value="intellij_idea_classic_os_x">IntelliJ IDEA Classic (OS X)
+                    </option>
+                    <option data-group="secondary" value="xcode">Xcode</option>
+                    <option data-group="secondary" value="visual_studio">Visual Studio</option>
+                    <option data-group="secondary" value="resharper">ReSharper</option>
+                    <option data-group="secondary" value="resharper_osx">ReSharper OSX</option>
+                    <option data-group="secondary" value="emacs">Emacs</option>
+                </select></div>
+                <div class="panel-trigger"></div>
+            </div>
+        </header>
+        <section class="panel__content">
+            <div class="container">
+                <article class="article" data-shortcut-switcher="false">
+                    <div class="navigation-links _top"><a class="navigation-links__prev"
+                                                          href="git-branches-in-multirooted-projects.html">Git Branches
+                        in Multirooted Projects</a><a class="navigation-links__next"
+                                                      href="stashing-and-unstashing-changes.html">Stashing and
+                        Unstashing Changes</a></div>
+                    <h1>Setting Up a Local Git Repository</h1>
+                    <p>Although Git provides high flexibility in arranging data and your work with repositories,
+                        the following scenarios are most commonly used for setting up a local Git repository:
+                    <ul class="list _bullet">
+                        <li class="list__item">
+                            <a href="#cloneExistingRepository"><span>Clone</span></a> an existing remote repository and
+                            create a new project with the downloaded data.
+                        </li>
+                        <li class="list__item">
+                            <a href="#createNewRepository"><span>Create a local repository</span></a> which you can <a
+                                href="pushing-changes-to-the-upstream-git-push.html"><span>push</span></a> to a remote
+                            location later, if necessary.
+                        </li>
+                    </ul>
+                    </p><a name="cloneExistingRepository"></a><a name="dynaProc0"></a>
+                    <section class="procedure-steps"><h2>To clone a remote Git repository</h2>
+                        <ol class="list _decimal">
+                            <li class="list__item">On the main menu, choose <span class="menupath">VCS | Checkout from Version Control | Git</span>.
+                                The <a href="clone-repository-dialog.html"><span>Clone Repository</span></a> dialog box
+                                opens.
+                            </li>
+                            <li class="list__item">In the <span class="control">Git Repository URL</span> text box, type
+                                the URL of the remote repository which you want to clone.
+                            </li>
+                            <li class="list__item">Click the <span class="control">Test</span> button next to the <span
+                                    class="control">Git Repository URL</span> text box to check that connection to the
+                                remote repository
+                                can be established successfully.
+                            </li>
+                            <li class="list__item">In the <span class="control">Parent Directory</span> text box,
+                                specify the directory where you want PhpStorm to create a folder for your local Git
+                                repository.
+                                Use the <span class="control">Browse</span> button <img alt="browseButton.png"
+                                                                                        width="15" height="15"
+                                                                                        src="/help/img/idea/browseButton.png"
+                                                                                        class="inline-icon-15"> button,
+                                if necessary.
+                            </li>
+                            <li class="list__item">In the <span class="control">Directory Name</span> text box, specify
+                                the name of the new folder into which the repository will be cloned. Click <span
+                                        class="control">Clone</span>.
+                            </li>
+                            <li class="list__item">Create a new project based on the cloned data by accepting the
+                                corresponding suggestion displayed by PhpStorm.
+                            </li>
+                        </ol>
+                        <p class="procIntro">
+                        <p>
+                            Git root mapping will be automatically set to the project root directory.
+                        </p>
+                        </p></section>
+                    <a name="createNewRepository"></a><a name="dynaProc1"></a>
+                    <section class="procedure-steps"><h2>To create a local Git repository</h2>
+                        <ol class="list _decimal">
+                            <li class="list__item">Open the project you want to store in a repository.</li>
+                            <li class="list__item">On the main menu, choose <span class="menupath">VCS | Import into Version Control | Create Git Repository</span>.
+                            </li>
+                            <li class="list__item">In the <a
+                                    href="select-path-dialog.html"><span>dialog that opens</span></a>, specify the
+                                directory where you want to create a new Git repository.
+                                <aside class="tip sideblock">
+                                    <p>By default, PhpStorm suggests the root of the current project.</p>
+                                </aside>
+                                <aside class="warning sideblock">
+                                    <p>Git does not support external paths. So if you choose another directory,
+                                        note that it must contain the tree where the project root resides.</p>
+                                </aside>
+                            </li>
+                            <li class="list__item">Put the required <a
+                                    href="adding-files-to-a-local-git-repository.html"><span>files under Git</span></a>
+                                version control.
+                                The files appear in the <a
+                                        href="version-control-tool-window.html"><span>Version Control</span></a> tool
+                                window under the <span class="control">Default</span> node.
+                                <aside class="tip sideblock">
+                                    <p>If you specify Git as the version control system for a directory in the <a
+                                            href="version-control.html"><span>Version Control</span></a> dialog box,
+                                        PhpStorm will suggest to put each new file in this directory under Git control.
+                                    </p>
+                                </aside>
+                            </li>
+                        </ol>
+                    </section>
+                    <div class="navigation-links _bottom"><a class="navigation-links__prev"
+                                                             href="git-branches-in-multirooted-projects.html">Git
+                        Branches in Multirooted Projects</a><a class="navigation-links__next"
+                                                               href="stashing-and-unstashing-changes.html">Stashing and
+                        Unstashing Changes</a></div>
+                    <section class="seealso">
+                        <div class="seealso__header"><h2>See Also</h2></div>
+                        <div class="seealso__content">
+                            <div class="seealso__col"><h3>Procedures:</h3>
+                                <ul>
+                                    <li>
+                                        <a href="version-control-with-phpstorm.html"><span>Version Control with PhpStorm</span></a>
+                                    </li>
+                                    <li><a href="adding-files-to-version-control.html"><span>Adding Files to Version Control</span></a>
+                                    </li>
+                                    <li><a href="getting-local-working-copy-of-the-repository.html"><span>Getting Local Working Copy of the Repository</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="seealso__col"><h3>Reference:</h3>
+                                <ul>
+                                    <li><a href="version-control-reference.html"><span>Version Control Reference</span></a>
+                                    </li>
+                                    <li><a href="clone-repository-dialog.html"><span>Clone Repository Dialog</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="seealso__col"><h3>Concepts:</h3>
+                                <ul>
+                                    <li><a href="version-control-with-phpstorm-2.html"><span>Version Control with PhpStorm</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="last-modified">Last modified: 7 May 2016</div>
+                </article>
+                <div id="disqus_thread"></div>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="/help/app/app.js"></script>
+</body>
+</html>
