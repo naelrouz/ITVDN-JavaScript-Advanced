@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.3</title>
+    <script>
+        window.onload = function () {
+
+            //function getElementBy() {
+            var e = document.getElementById('category');
+            var e = document.documentElement
+            // childNodes - получение всех дочерних узлов.
+            for (var i = 0; i < e.childNodes.length; ++i) {
+                var arrayElement = e.childNodes[i];
+
+                // если найденный узел не элемент то пропустить его
+                if (arrayElement.nodeType == 3) { continue; }
+                if(arrayElement.getAttribute('class') == 'class1'){
+                    alert(arrayElement.getAttribute('href'));
+                }
+
+            }
+            // }
+
+        }
+    </script>
+</head>
+<body>
+
+
+<span id="category">
+                    <a href="aaaa" class="class1" rel="category tag">SEO</a>,
+                    <a href="bbbb" rel="category tag">Механизмы ранжрования поисковых систем</a>,
+                    <a href="http://www.bontonweb.com/category/seo/ssylochnoe-ranzhirovanie" rel="category tag">Ссылочное
+                        ранжирование</a>
+</span>
+
+
+</body>
+</html>
