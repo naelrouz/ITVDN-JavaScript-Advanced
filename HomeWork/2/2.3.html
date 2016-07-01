@@ -6,22 +6,27 @@
     <script>
         window.onload = function () {
 
-            //function getElementBy() {
-            var e = document.getElementById('category');
-            var e = document.documentElement
-            // childNodes - получение всех дочерних узлов.
-            for (var i = 0; i < e.childNodes.length; ++i) {
-                var arrayElement = e.childNodes[i];
+//            //function getElementBy() {
+//            var e = document.getElementById('category');
+//            var e = document.documentElement
+//            // childNodes - получение всех дочерних узлов.
+//            for (var i = 0; i < e.childNodes.length; ++i) {
+//                var arrayElement = e.childNodes[i];
+//
+//                // если найденный узел не элемент то пропустить его
+//                if (arrayElement.nodeType == 3) { continue; }
+//                if(arrayElement.getAttribute('class') == 'class1'){
+//                    alert(arrayElement.getAttribute('href'));
+//                }
+//
+//            }
+//            // }
 
-                // если найденный узел не элемент то пропустить его
-                if (arrayElement.nodeType == 3) { continue; }
-                if(arrayElement.getAttribute('class') == 'class1'){
-                    alert(arrayElement.getAttribute('href'));
-                }
+            for (var i = 0; i < document.body.childNodes.length; i++) {
+                alert(document.body.childNodes[i]); // Text, DIV, Text, UL, ..., SCRIPT
+                //if (arrayElement.nodeType == 3) { continue; }
 
             }
-            // }
-
         }
     </script>
 </head>

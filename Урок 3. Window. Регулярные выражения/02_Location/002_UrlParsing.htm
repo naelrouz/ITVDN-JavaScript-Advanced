@@ -10,6 +10,7 @@
             var args = {};                                  // пустой объект
             // login=admin password=123
             var query = location.search.substring(1);       // Получение строки запроса.
+//            alert(query);
             var pairs = query.split("&");                   // Разделение строки по амперсанду
 
             for (var i = 0; i < pairs.length; i++) {
@@ -29,13 +30,16 @@
             return args;
         }
 
-        // Для теста примера перейдите по URL текущей страницы + ?login=admin&password=123
+//         Для теста примера перейдите по URL текущей страницы + ?login=admin&amp;password=123
         function print() {
             var args = getQueryString();
             var e = document.createElement("p");
 
+
             e.innerHTML = "Login " + args.login + "<br />";
-            e.innerHTML += "Password " + args.password;
+            e.innerHTML += "Password " + args.password + "<br />";
+            e.innerHTML += "Test " + args.test;
+
 
             document.body.appendChild(e);
         }

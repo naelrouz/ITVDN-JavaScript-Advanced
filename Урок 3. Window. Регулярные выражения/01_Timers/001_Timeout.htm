@@ -8,16 +8,16 @@
 
             // setTimeout - планирует один запуск указанной функции через определенное количество миллисекунд
             // функция showMessage будет запущена через 5 секунд
-            setTimeout(showMessage, 5000)
+//            setTimeout(showMessage, 5000)
+//
+//            function showMessage2() {
+//                alert("showMessage2");
+//            }
 
-            function showMessage() {
+//             второй вариант запуска
+            setTimeout(function () {
                 alert("Hello world");
-            }
-
-            // второй вариант запуска
-            //setTimeout(function () {
-            //    alert("Hello world");
-            //}, 5000);
+            }, 5000);
         }
     </script>
 </head>

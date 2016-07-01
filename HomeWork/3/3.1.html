@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.1</title>
+    <style>
+        #timer {
+            display: table;
+            padding: 5px;
+            background: #b2e57e;
+            border-radius: 6px;
+            font-family: Arial;
+            font-weight: bold;
+            color: #404040;
+            font-size: 2em;
+        }
+
+        .timeblock {
+            display: table-cell;
+            padding: 5px;
+            background: #ecf2f2;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 6px;
+        }
+
+        .doublepoints {
+            padding: 5px;
+            text-align: center;
+        }
+
+        .btn-group {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="timer">
+    <div id="min" class="timeblock">00</div>
+    <div class="doublepoints">:</div>
+    <div id="sec" class="timeblock">00</div>
+    <div class="doublepoints">:</div>
+    <div id="ms" class="timeblock">00</div>
+</div>
+<div class="btn-group">
+    <input id="startButton" type="button" value="Start"/>
+    <input id="stopButton" type="button" value="Stop"/>
+    <input id="resetButton" type="button" value="Reset"/>
+</div>
+<script>
+
+    function numFormat(num) {
+        var pattern = /^\d$/;
+        var test = pattern.test(num);
+//        console.log(test);
+        return test ? '0' + num : num;
+
+//        var rez = (num.length < 2) ? '0' + num : num ;
+//        console.log(num.length);
+//        return rez;
+
+    }
+
+    window.onload = function () {
+        var
+                timer = document.getElementById("timer"),
+                minTimer = 0,
+                secTimer = 0,
+                msTimer = 0,
+                minHandler,
+                secHandler,
+                msHandler
+                ;
+        
+        document.getElementById("startButton").onclick = function () {
+
+            if (msHandler || secHandler || minHandler) {
+                clearInterval(msHandler);
+                clearInterval(secHandler);
+                clearInterval(minHandler);
+            }
+
+            msHandler = setInterval(msFun, 1);
+            secHandler = setInterval(secFun, 1000);
+            minHandler = setInterval(minFun, 60000);
+        }
+
+        document.getElementById("stopButton").onclick = function () {
+            // останавливаем таймеры
+            clearInterval(msHandler);
+            clearInterval(secHandler);
+            clearInterval(minHandler);
+        }
+
+        document.getElementById("resetButton").onclick = function () {
+//            alert('Reset');
+            // останавливаем таймеры
+            minTimer = 0;
+            secTimer = 0;
+            msTimer = 0;
+            document.getElementById("ms").innerHTML = '00';
+            document.getElementById("sec").innerHTML = '00';
+            document.getElementById("min").innerHTML = '00';
+        }
+
+        function msFun() {
+            if (msTimer == 100) {
+                msTimer = 0;
+            }
+            document.getElementById("ms").innerHTML = msTimer / 10;
+            msTimer++;
+        }
+
+        function secFun() {
+            if (secTimer == 60) {
+                secTimer = 0;
+            }
+            document.getElementById("sec").innerHTML = numFormat(secTimer);
+            secTimer++;
+        }
+
+        function minFun() {
+            if (minTimer == 60) {
+                minTimer = 0;
+            }
+            document.getElementById("min").innerHTML = numFormat(minTimer);
+            minTimer++;
+        }
+    }
+</script>
+</body>
+</html>

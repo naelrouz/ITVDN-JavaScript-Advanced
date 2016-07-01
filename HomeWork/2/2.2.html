@@ -20,14 +20,14 @@
                 div.appendChild(item);
             } else {
                 i = 0;
-                do {
-                    var list = document.getElementById("div");
+                var list = document.getElementById("div");
+                while (list.lastChild != null)
+                {
                     var item = list.lastChild;
 
                     // удаление выбранного элемента из дерева.
                     list.removeChild(item);
-
-                } while (list.lastChild != null)
+                }
             }
         }
 

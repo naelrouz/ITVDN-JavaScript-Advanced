@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>3.2</title>
+
+</head>
+<body>
+<div id="sum"></div>
+<input type="button" name="name" value="Get SUM" onclick="print()" />
+
+<!---------------------------------- script ---------------------------------->
+<script type="text/javascript">
+
+
+
+    // Функция для чтения данных, которые переданы при GET запросе (в адресной строке).
+    function getQueryString() {
+
+        var args = {};                                  // пустой объект
+        // login=admin password=123
+        var query = location.search.substring(1);       // Получение строки запроса.
+//            alert(query);
+        var pairs = query.split("&");                   // Разделение строки по амперсанду
+
+        for (var i = 0; i < pairs.length; i++) {
+
+            var pos = pairs[i].indexOf('=');            // Проверка пары "name=value"
+            if (pos == -1) {                            // Если не найдено - пропустить
+                continue;
+            }
+
+            var argname = pairs[i].substring(0, pos);   // Получение имени
+            var value = pairs[i].substring(pos + 1);    // Получение значения
+
+            args[argname] = value;                      // Сохранение как свойства
+
+        }
+
+        return args;
+    }
+
+    //         Для теста примера перейдите по URL текущей страницы + ?login=admin&amp;password=123
+    function print() {
+        var args = getQueryString();
+        var e = document.createElement("p");
+        var sum = parseInt(args.a) + parseInt(args.b);
+
+        e.innerHTML = "sum = " + sum;
+
+
+
+        document.body.appendChild(e);
+    }
+
+</script>
+</body>
+</html>
+
