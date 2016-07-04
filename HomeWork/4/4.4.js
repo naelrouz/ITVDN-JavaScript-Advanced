@@ -1,15 +1,50 @@
 window.onload = function () {
     //alert('Begin');
-    var rightButton = document.getElementById('right'),
-        block = document.getElementById('block1')
+    var
+    // topButton = document.getElementById('top'),
+        rightButton = document.getElementById('right'),
+    //    bottomButton = document.getElementById('bottom'),
+        leftButton = document.getElementById('left'),
+        block = document.getElementById('block1'),
+        cssValue = '',
+        eStyle = ''
         ;
+
+
+
+    //topButton.onclick = function() {
+    //    move(block,'top');
+    //};
     rightButton.onclick = function() {
 
-        var left = block.style.left;
-        //alert( left );
-        console.log(document.body.style.color);
-        //block.style.left = left + '100' + 'px';
-    };
+    }
+    function moveX(e,direction){
+        //var left = parseInt(getStyle(block,'left'));
+        var top = parseInt(getStyle(e,direction));
+        eStyle = e.style;
+        e.style[direction] = cssValue + 100 + 'px';
+        console.log(left);
+    }
+
+    function moveY(e,direction){
+
+        var left = parseInt(getStyle(e,direction));
+
+        e.style.left = (direction == 'left') ? left - 100 + 'px' : left + 100 + 'px';
+        console.log(left);
+    }
 
 
+
+
+
+// FUNS
+    function getStyle(element, styleName) {
+        if (element.currentStyle) { // получение доступа к Computed стилям для IE
+            return element.currentStyle[styleName];
+        }
+        else if (window.getComputedStyle) {
+            return window.getComputedStyle(element, null)[styleName];
+        }
+    }
 }
