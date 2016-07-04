@@ -16,22 +16,20 @@ window.onload = function () {
     //    move(block,'top');
     //};
     rightButton.onclick = function() {
-
+        moveX(block,'right')
     }
     function moveX(e,direction){
-        //var left = parseInt(getStyle(block,'left'));
-        var top = parseInt(getStyle(e,direction));
-        eStyle = e.style;
-        e.style[direction] = cssValue + 100 + 'px';
+        //var left = parseInt(getStyle(e,direction));
+        var left = getStyle(block,'left');
+
+        //e.style.left = (direction == 'left') ? left - 100 + 'px' : left + 100 + 'px';
+        e.style.left = left + 100 + 'px';
         console.log(left);
     }
 
     function moveY(e,direction){
 
-        var left = parseInt(getStyle(e,direction));
 
-        e.style.left = (direction == 'left') ? left - 100 + 'px' : left + 100 + 'px';
-        console.log(left);
     }
 
 
