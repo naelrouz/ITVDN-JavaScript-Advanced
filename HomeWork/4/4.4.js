@@ -1,39 +1,70 @@
 window.onload = function () {
     //alert('Begin');
     var
-    // topButton = document.getElementById('top'),
+        topButton = document.getElementById('top'),
         rightButton = document.getElementById('right'),
-    //    bottomButton = document.getElementById('bottom'),
+        bottomButton = document.getElementById('bottom'),
         leftButton = document.getElementById('left'),
         block = document.getElementById('block1'),
-        cssValue = '',
-        eStyle = ''
+        block2 = document.getElementById('block2'),
+        cssValue,
+        eStyle
         ;
 
 
+    //Key Event
 
-    //topButton.onclick = function() {
-    //    move(block,'top');
-    //};
-    rightButton.onclick = function() {
-        moveX(block,'right')
+    document.addEventListener("keydown", function (event) {
+
+        console.log(event);
+
+        switch (event.keyCode) {
+            case 37:
+                moveX(block, 'left');
+                break;
+            case 38:
+                moveY(block, 'top');
+                break;
+            case 39:
+                moveX(block, 'right');
+                break;
+            case 40:
+                moveY(block, 'bottom');
+                break;
+            default:
+        }
+
+
+    });
+
+
+    rightButton.onclick = function () {
+        moveX(block, 'right');
     }
-    function moveX(e,direction){
-        //var left = parseInt(getStyle(e,direction));
-        var left = getStyle(block,'left');
 
-        //e.style.left = (direction == 'left') ? left - 100 + 'px' : left + 100 + 'px';
-        e.style.left = left + 100 + 'px';
-        console.log(left);
+    leftButton.onclick = function () {
+        moveX(block, 'left');
     }
 
-    function moveY(e,direction){
-
-
+    topButton.onclick = function () {
+        moveY(block, 'top');
     }
 
+    bottomButton.onclick = function () {
+        moveY(block, 'bottom');
+    }
 
+    function moveX(e, direction) {
+        var left = parseInt(getStyle(e, 'left'));
+        left = parseInt((direction == 'left') ? left - 100 : left + 100);
+        e.style.left = left > 0 ? left + 'px' : 0 + 'px';
+    }
 
+    function moveY(e, direction) {
+        var top = parseInt(getStyle(e, 'top'));
+        top = (direction == 'top') ? top - 100 : top + 100;
+        e.style.top = top > 0 ? top + 'px' : 0 + 'px';
+    }
 
 
 // FUNS

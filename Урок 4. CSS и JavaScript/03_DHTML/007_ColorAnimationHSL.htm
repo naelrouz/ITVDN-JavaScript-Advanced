@@ -17,12 +17,17 @@
         e.style.height = "100px";
         e.style.border = "solid black 1px";
 
-        var color = 0;
+        var color = 0, i = 0;
 
         setInterval(function () {
-            color = color + 1 % 360;
+//            color = color + 1 % 360;
+
+            color = i++ % 360;
+            console.log(color);
+
+
             e.style.backgroundColor = "hsl(" + color + ", 100%, 50%)"; // hsl(0, 100%, 50%)
-        }, 50);
+        }, 20);
     </script>
 </body>
 </html>

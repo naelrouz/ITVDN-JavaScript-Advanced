@@ -1,27 +1,60 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Простая анимация цвета</title>
+    <style>
+        #rect2 {
+            margin-top: 20px;
+            background-size: cover;
+            background-position: center center;
+            -webkit-transition: all 1s 0s ease;
+            transition: all 1s 0s ease;
+        }
+    </style>
 </head>
 <body>
 
-    <div id="rect">
-    </div>
+<div id="rect">
+</div>
 
-    <script type="text/javascript">
-        var e = document.getElementById("rect");
+<div id="rect2">
+</div>
 
-        e.style.width = "100px";
-        e.style.height = "100px";
-        e.style.border = "solid black 5px";
+<script type="text/javascript">
+    var e = document.getElementById("rect");
 
-        var colors = ["white", "yellow", "orange", "red"]
-        var nextColor = 0;
+    e.style.width = "100px";
+    e.style.height = "100px";
+    e.style.border = "solid black 5px";
 
-        // Вызов следующей функции каждые 500 миллисекунд для анимации цвета.
-        setInterval(function () {
-            e.style.backgroundColor = colors[nextColor++ % colors.length];
-        }, 500);
-    </script>
+
+    var colors = ["white", "yellow", "orange", "red"]
+    var nextColor = 0;
+
+    // Вызов следующей функции каждые 500 миллисекунд для анимации цвета.
+    setInterval(function () {
+        e.style.backgroundColor = colors[nextColor++ % colors.length];
+    }, 500);
+
+    //        backgroundImage Slide
+
+    var rect2 = document.getElementById("rect2");
+
+    rect2.style.width = "300px";
+    rect2.style.height = "300px";
+    rect2.style.border = "solid black 5px";
+
+    var bgImages = ["url(img/1.jpg)", "url(img/2.jpg)", "url(img/3.jpg)"]
+    var bg = 0, i;
+
+    // Вызов следующей функции каждые 500 миллисекунд для анимации цвета.
+    setInterval(function () {
+        i = bg++ % bgImages.length
+        console.log(i);
+        rect2.style.backgroundImage = bgImages[i];
+
+    }, 1000);
+</script>
 </body>
 </html>
