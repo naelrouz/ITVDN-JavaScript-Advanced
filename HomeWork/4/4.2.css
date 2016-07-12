@@ -1,0 +1,22 @@
+body{
+    background-image: url("img/tobg.jpg") ;
+    /*background-size: cover ;*/
+    /*background-position: 1px 1px;*/
+
+}
+
+#loginform{
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.inputs{
+
+}
+
+
+#t{
+    color: red;
+    display: block;
+    margin: 0 auto 0 auto;
+}

@@ -12,24 +12,24 @@ window.onload = function () {
     setInterval(function () {
         moveX(topButton, getRandomArbitary(0, 500));
         moveY(topButton, getRandomArbitary(0, 500));
-    }, 700)
+    }, 900)
 
     setInterval(function () {
         moveX(rightButton, getRandomArbitary(0, 500));
         moveY(rightButton, getRandomArbitary(0, 500));
-    }, 600)
+    }, 1900)
 
     setInterval(function () {
         moveX(bottomButton, getRandomArbitary(0, 500));
         moveY(bottomButton, getRandomArbitary(0, 500));
-    }, 750)
+    }, 1600)
 
     setInterval(function () {
         moveX(leftButton, getRandomArbitary(0, 500));
         moveY(leftButton, getRandomArbitary(0, 500));
 
         console.log(leftButton);
-    }, 800)
+    }, 1400)
 
     //leftButton.style.left = 'calc(20%*2)';
 
