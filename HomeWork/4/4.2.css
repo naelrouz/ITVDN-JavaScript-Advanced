@@ -6,17 +6,35 @@ body{
 }
 
 #loginform{
+    border: 2px solid #343333;
+    width: 180px;
     display: block;
+    padding: 20px;
+    margin: 20% auto 0 auto;
+    background: #fafafa;
+    /*opacity: 0.5;*/
+    position: relative;
+    text-align: center;
+}
+
+form input{
+display: inline-block;
+margin: 0px 0px 0px 0px;
+}
+
+form input[type=submit]{
+    margin-top: 20px;
+}
+
+
+#messages{
+    /*padding: 2px 0px 2px 0px;*/
+    color: #fff;
+    background-color: #d97171;
+    display: none;
     margin: 0 auto 0 auto;
 }
 
-.inputs{
-
-}
-
-
-#t{
-    color: red;
-    display: block;
-    margin: 0 auto 0 auto;
+#messages p{
+    padding: 2px 0px 2px 0px;
 }

@@ -16,14 +16,51 @@ window.onload = function () { "use strict"
 
                 login.style.border = '2px solid red';
                 errors.login = false;
+
             }
 
             if(password.value != '123'){
-                password.style.border = '2px solid red';
                 e.preventDefault();
+
+                password.style.border = '2px solid red';
+                errors.password = false;
+
             }
 
+            messagesBord(errors);
+
         });
+    }
+
+    function messagesBord(){
+       var messages = '';
+
+        if(errors.login == false){
+            messages += '<p>Логин не верен</p>';
+        }
+
+        if(errors.password == false){
+            messages += '<p>Пароль не верен</p>';
+        }
+
+        if(messages != ''){
+           var messagesDiv =  document.getElementById('messages');
+
+            messagesDiv.innerHTML = messages;
+            messagesDiv.style.display = 'block';
+        }
+        document.getElementById('messages').innerHTML = messages;
+
+        console.log('login: ' + errors.login);
+        console.log('login: ' + errors.password);
+
+        console.log(' ~ ' + messages);
+
+        //messages.forEach(function(){
+        //    if(messages[i]){
+        //
+        //    }
+        //})
     }
 
 
