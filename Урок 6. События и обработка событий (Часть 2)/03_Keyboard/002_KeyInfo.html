@@ -6,16 +6,23 @@
         window.onload = function () {
             var main = document.getElementById("main");
 
-            // onkeydown - событие подходит для обработки функциональных клавиш.
-            main.onkeypress = function (e) { // снять комментарий
-            //main.onkeydown = function (e) {
+//             onkeydown - событие подходит для обработки функциональных клавиш.
+
+//            main.onkeypress = function (e) {
+//                keyInfo(e);
+//            }
+            main.onkeydown = function (e) {
+                keyInfo(e);
+            };
+
+            function keyInfo(e){
                 clear();
                 print("alt = " + e.altKey);
                 print("ctrl = " + e.ctrlKey);
                 print("shift = " + e.shiftKey);
                 print("charCode = " + e.charCode); // код символа (передается при событии keypress)
                 print("keyCode = " + e.keyCode);
-            };
+            }
 
             function print(message) {
                 document.getElementById("output").innerHTML += message + "<br />";

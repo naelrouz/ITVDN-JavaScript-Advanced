@@ -48,6 +48,7 @@ window.onload = function () { "use strict"
 
             messagesDiv.innerHTML = messages;
             messagesDiv.style.display = 'block';
+            messagesDiv.style.opacity = '1';
         }
         document.getElementById('messages').innerHTML = messages;
 

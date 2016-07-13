@@ -1,40 +1,77 @@
-body{
-    background-image: url("img/tobg.jpg") ;
+body {
+    font-family: Arial;
+    background-image: url("img/tobg.jpg");
     /*background-size: cover ;*/
     /*background-position: 1px 1px;*/
 
 }
 
-#loginform{
-    border: 2px solid #343333;
+#loginform {
+    /*border: 2px solid #343333;*/
+    background-image: url("img/tobg.jpg");
+    background-position: center center;
+    background-size: cover;
     width: 180px;
     display: block;
     padding: 20px;
     margin: 20% auto 0 auto;
-    background: #fafafa;
     /*opacity: 0.5;*/
     position: relative;
     text-align: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 67px -13px #000000;
 }
 
-form input{
-display: inline-block;
-margin: 0px 0px 0px 0px;
+
+form input {
+    border-radius: 20px;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 0px 0px 5px 0px;
+
+    /*box-shadow: 0px 0px 2px 2px #000000 inset;*/
+    /*border: 0px solid #343333;*/
 }
 
-form input[type=submit]{
+form input[type=text] {
+
+}
+
+form input[type=submit] {
+
     margin-top: 20px;
 }
 
+#messages {
 
-#messages{
     /*padding: 2px 0px 2px 0px;*/
     color: #fff;
     background-color: #d97171;
-    display: none;
+    /*display: none;*/
     margin: 0 auto 0 auto;
+    opacity:0;
+    border-radius: 20px;
+
+    -webkit-transition: all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition:         all 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-#messages p{
-    padding: 2px 0px 2px 0px;
+
+#messages p {
+    padding: 5px 0px 5px 0px;
 }
+
+.btn {
+    border: 0px;
+    font-family: Arial;
+    border-radius: 20px;
+    padding: 5px 10px;
+
+}
+
+.login {
+    color: #343333;
+    background-color: #b2e57e;
+
+}
+
