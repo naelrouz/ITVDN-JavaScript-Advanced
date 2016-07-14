@@ -15,11 +15,11 @@
 
         Email
         <!-- type="email" - поле должно содержать данные в формате email адреса -->
-        <input type="email" name="emailAddress" value="" /><br />
+        <input required="required" type="email" name="emailAddress" /><br />
 
         Phone
         <!-- pattern="\d{3}-\d{2}-\d{2}" - поле должно содержать значение которое соответствует формату заданному через регулярное выражение -->
-        <input type="text" pattern="\d{3}-\d{2}-\d{2}" title="Формат телефона 000-00-00" name="emailAddress" value="" /><br />
+        <input required="required"  type="text" pattern="\d{3}-\d{2}-\d{2}" title="Формат телефона 000-00-00" name="emailAddress" /><br />
 
         <input type="submit" />
     </form>

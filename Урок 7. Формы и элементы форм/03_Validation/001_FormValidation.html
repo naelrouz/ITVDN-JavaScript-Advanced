@@ -7,7 +7,7 @@
         window.addEventListener("load", function () {
 
             // обработка события отправки запроса
-            document.forms[0].addEventListener("submit", function (e) {
+            document.forms[0].addEventListener("submit", function (e) { // e - объект события
                 var isValid = true;
 
                 var login = document.getElementsByName("login")[0],
