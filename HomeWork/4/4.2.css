@@ -44,11 +44,11 @@ form input[type=submit] {
 
 #messages {
 
-    /*padding: 2px 0px 2px 0px;*/
+
     color: #fff;
     background-color: #d97171;
     /*display: none;*/
-    margin: 0 auto 0 auto;
+    margin: 0 auto 10px auto;
     opacity:0;
     border-radius: 20px;
 
@@ -59,6 +59,7 @@ form input[type=submit] {
 
 #messages p {
     padding: 5px 0px 5px 0px;
+    margin: 0px;
 }
 
 .btn {
