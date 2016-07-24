@@ -13,7 +13,7 @@ function init() {
 
 
     for (var i = 0; i < textareas.length; i++) {
-        textareas[i].onclick = function(){
+        textareas[i].onfocus = function(){
             this.style.backgroundColor = "red";
         }
     }
@@ -23,13 +23,20 @@ function init() {
 
 
 
-document.addEventListener("keydown", function (e) {
+document.addEventListener("keypress", function (e) {
 
     console.log(e);
 
-    if( e.keyCode == 82 && e.ctrlKey) {
-        //console.log('dasfas');
-        //alert('crtl + r');
+    if( e.charCode == 115 && e.ctrlKey) {
+        alert('Ctrl + S - сохранено');
+    }
+
+    if( e.charCode == 97 && e.ctrlKey) {
+        alert('Ctrl + A - выделить все');
+    }
+
+    if( e.charCode == 83 && e.ctrlKey && e.shiftKey) {
+        alert('Ctrl + Shift + S - сохранить как');
     }
 
 });
