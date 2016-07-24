@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1230d627-0a24-4986-8015-21313a0ab53e" name="Default" comment="HW begin 6.1">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Урок 6. События и обработка событий (Часть 2)/Описание - события и обработка событий.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Урок 7. Формы и элементы форм/Описание - формы и элементы формы.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HomeWork/6/6.3/6.3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HomeWork/6/6.3/6.3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HomeWork/6/6.3/6.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HomeWork/6/6.4/6.4.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HomeWork/6/6.4/6.4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HomeWork/6/6.4/6.4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.php" />
+    <list default="true" id="1230d627-0a24-4986-8015-21313a0ab53e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HomeWork/6/6.2/6.2.js" afterPath="$PROJECT_DIR$/HomeWork/6/6.2/6.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
     </list>
     <ignored path="ITVDN-JavaScript-Advanced.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +68,8 @@
       <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="375">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -373,7 +364,7 @@
       <updated>1463386389285</updated>
       <workItem from="1469201239259" duration="6516000" />
       <workItem from="1469360484291" duration="1897000" />
-      <workItem from="1469378953106" duration="2076000" />
+      <workItem from="1469378953106" duration="2464000" />
     </task>
     <task id="LOCAL-00001" summary="Begin">
       <created>1463386547935</created>
@@ -473,18 +464,26 @@
       <option name="project" value="LOCAL" />
       <updated>1468504009060</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="HW compl 6.3, 6.4">
+      <created>1469389052199</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1469389052199</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10489000" />
+    <option name="totallyTimeSpent" value="10877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2890625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2890625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -493,7 +492,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -545,7 +543,8 @@
     <MESSAGE value="HW comp 4.3, 4.4/ begin 4.2" />
     <MESSAGE value="HW comp 4.3, 4.4, 4.2" />
     <MESSAGE value="HW begin 6.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="HW begin 6.1" />
+    <MESSAGE value="HW compl 6.3, 6.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW compl 6.3, 6.4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -887,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="375">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>

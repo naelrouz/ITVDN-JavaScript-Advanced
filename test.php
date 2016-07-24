@@ -9,13 +9,13 @@
 
 function wordsCount($str)
 {
-    $arr = trim(explode(' ', $str);
+    $arr = explode(' ', trim($str));
     $result = [];
 
 
     foreach ($arr as $index => $item)
     {
-        if (in_array(trim($item), $arr))
+        if (in_array($item, $arr))
         {
             $result[$item] += 1;
         }
